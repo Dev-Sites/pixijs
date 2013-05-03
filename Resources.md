@@ -2,6 +2,10 @@ Getting Started
 
 http://www.goodboydigital.com/pixi-js-tutorial-getting-started/
 
+Forum:
+
+http://www.html5gamedevs.com/forum/15-pixijs/
+
 Interactivity:
 
 http://www.goodboydigital.com/pixi-js-now-even-better-at-being-interactive/
