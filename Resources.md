@@ -1,17 +1,23 @@
-Getting Started
+## Guides and Tutorials
 
-http://www.goodboydigital.com/pixi-js-tutorial-getting-started/
+[Getting Started](http://www.goodboydigital.com/pixi-js-tutorial-getting-started/)
 
-Forum:
+### General
 
-http://www.html5gamedevs.com/forum/15-pixijs/
+[PeepsQuest Game Dev Tutorials](http://peepsquest.github.io/tutorials/pixiIsometric1.html)
 
-Interactivity:
+### Interactivity
 
-http://www.goodboydigital.com/pixi-js-now-even-better-at-being-interactive/
+[Pixi.js Now Even Better at Being Interactive](http://www.goodboydigital.com/pixi-js-now-even-better-at-being-interactive/)
 
-http://www.goodboydigital.com/pixi-js-gets-interactive/
+[Pixi.js Gets Interactive](http://www.goodboydigital.com/pixi-js-gets-interactive/)
 
-Utility library for PIXI.js including typescript def (built by @Pulsar)
 
-https://github.com/xperiments/Pulsar
+## Utilities and Libraries
+
+[TypeScript def by @Pulsar](https://github.com/xperiments/Pulsar)
+
+
+## Community
+
+[Forum](http://www.html5gamedevs.com/forum/15-pixijs/)
