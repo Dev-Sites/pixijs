@@ -15,6 +15,8 @@
 
 ## Utilities and Libraries
 
+[pm-spritesheet - Create Texture Packer Compatible Sprite Sheets (open source)](http://peepsquest.github.io/tutorials/creatingSpritesheets.html)
+
 [TypeScript def by @Pulsar](https://github.com/xperiments/Pulsar)
 
 
