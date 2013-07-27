@@ -9,10 +9,11 @@
 
 ### PeepsQuest Tutorials
 
-- [Creating Sprite Sheets (compatible with Pixi.js, open source)](http://peepsquest.github.io/tutorials/creatingSpritesheets.html)
-- [Pixi.js Basics](http://peepsquest.github.io/tutorials/pixiBasics.html)
-- [Pixi.js Isometric Map Part 1 - Basics](http://peepsquest.github.io/tutorials/pixiIsometric1.html)
-- [Pixi.js Isometric Map Part 2 - Tiles with Height](http://peepsquest.github.io/tutorials/pixiIsometric2.html)
+- [Creating Sprite Sheets (compatible with Pixi.js, open source)](http://peepsquest.com/tutorials/creating-sprite-sheets.html)
+- [Pixi.js Basics](http://peepsquest.com/tutorials/pixi-basics.html)
+- [Pixi.js Isometric Map Part 1 - Basics](http://peepsquest.com/tutorials/isometric-map-basics.html)
+- [Pixi.js Isometric Map Part 2 - Tiles with Height](http://peepsquest.com/tutorials/isometric-tiles-with-height.html)
+- [Pixi.js Isometric Map Part 3 - Placing Avatar](http://peepsquest.com/tutorials/isometric-placing-avatar.html)
 
 ## Utilities and Libraries
 
