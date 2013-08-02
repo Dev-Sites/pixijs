@@ -18,6 +18,7 @@
 ## Utilities and Libraries
 
 - [TypeScript def by @Pulsar](https://github.com/xperiments/Pulsar)
+- [TypeScript def by @alamboley](https://github.com/alamboley/pixi.js)
 
 
 ## Community
