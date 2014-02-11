@@ -1,6 +1,6 @@
 ## New site launched!
 
-All things pixi such as tutorials and examples can be found here [Pixijs.com](http://www.pixijs.com/)
+All things pixi such as overview, tutorials, projects and examples can be found here [Pixijs.com](http://www.pixijs.com/)
 
 ## Guides and Tutorials
 
