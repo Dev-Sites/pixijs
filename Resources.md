@@ -1,3 +1,7 @@
+## New site launched!
+
+All things pixi such as tutorials and examples can be found here [Pixijs.com](http://www.pixijs.com/)
+
 ## Guides and Tutorials
 
 [Getting Started](http://www.goodboydigital.com/pixi-js-tutorial-getting-started/)
