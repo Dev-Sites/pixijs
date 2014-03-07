@@ -4,17 +4,24 @@ If you are using the canvas renderer things will run fine :) However due to the 
 
 #### What browsers are supported?
 
-We support the following with Canvas:
-IE 9+, FF 10+, Chrome 11+, Safari 5.1+, Opera 12+
+Browsers supported by the CanvasRenderer:
+- IE 9+,
+- FF 10+,
+- Chrome 11+,
+- Safari 5.1+,
+- Opera 12+
 
-We support the following with WebGL:
-IE 11+, FF 15+, Chrome 11+, Safari 5.1+, Opera 19+
+Note that IE 8 can work with the CanvasRenderer when using a [canvas polyfill][0], but it is not officially supported by the Pixi.js team.
+
+Browsers supported by the WebGLRenderer:
+- IE 11+,
+- FF 15+,
+- Chrome 11+,
+- Safari 5.1+,
+- Opera 19+
 
 We also try very hard to include support for:
-Ejecta, and CocoonJS
+- Ejecta,
+- CocoonJS
 
-If it doesn't work in an environment you are using please let us know and we will try to include it; provided that it supports *at least* these features:
-
-- Object.defineProperty
-- Canvas API
-- JS Image objects
+[0]: https://code.google.com/p/explorercanvas/
