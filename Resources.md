@@ -21,7 +21,10 @@ All things pixi such as overview, tutorials, projects and examples can be found 
 
 ### Building a Game
 
-- [Building a Parallax Scrolling Game with Pixi.js](http://flippinawesome.org/2013/11/04/building-a-parallax-scrolling-game-with-pixi-js/)
+- [Building a Parallax Scrolling Game with Pixi.js [Part 1]](http://www.yeahbutisitflash.com/?p=5226) 
+- [Building a Parallax Scrolling Game with Pixi.js [Part 2]](http://www.yeahbutisitflash.com/?p=5666)
+- [Building a Parallax Scrolling Game with Pixi.js [Part 3]](http://www.yeahbutisitflash.com/?p=6496)
+- [Building a Parallax Scrolling Game with Pixi.js [Part 4]](http://www.yeahbutisitflash.com/?p=7046)
 
 ## Utilities and Libraries
 
