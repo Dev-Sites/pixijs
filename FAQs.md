@@ -8,7 +8,7 @@ Browsers supported by the CanvasRenderer:
 - IE 9+,
 - FF 10+,
 - Chrome 11+,
-- Safari 5.1.4+,
+- Safari 2.0+,
 - Opera 12+
 
 Note that IE 8 can work with the CanvasRenderer when using a [canvas polyfill][0], but it is not officially supported by the Pixi.js team.
