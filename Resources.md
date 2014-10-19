@@ -22,7 +22,7 @@ All things pixi such as overview, tutorials, projects and examples can be found 
 
 - [TypeScript def by @Pulsar](https://github.com/xperiments/Pulsar)
 - [TypeScript def by @alamboley](https://github.com/alamboley/pixi.js)
-
+- [Haxe Externs of Pixi.js by @adireddy](https://github.com/adireddy/haxe-pixi)
 
 ## Community
 
