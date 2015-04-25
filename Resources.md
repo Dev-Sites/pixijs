@@ -20,10 +20,10 @@ All things pixi such as overview, tutorials, projects and examples can be found 
 
 ## Utilities and Libraries
 
-- [TypeScript def by @Pulsar](https://github.com/xperiments/Pulsar)
-- [TypeScript def by @alamboley](https://github.com/alamboley/pixi.js)
-- [Haxe Externs of Pixi.js by @adireddy](https://github.com/adireddy/haxe-pixi)
+- [TypeScript Definitions](https://github.com/pixijs/pixi-typescript)
+- [Haxe Externs by @adireddy](https://github.com/pixijs/pixi-haxe)
 
 ## Community
 
 - [Forum](http://www.html5gamedevs.com/forum/15-pixijs/)
+- [Chat](https://gitter.im/GoodBoyDigital/pixi.js)
