@@ -20,7 +20,8 @@ All things pixi such as overview, tutorials, projects and examples can be found 
 
 ## Utilities and Libraries
 
-- [TypeScript Definitions](https://github.com/pixijs/pixi-typescript)
+- [TypeScript Definitions (v2.x)](https://github.com/pixijs/pixi-typescript/tree/v2.x)
+- [TypeScript Definitions (v3.x)](https://github.com/pixijs/pixi-typescript)
 - [Haxe Externs by @adireddy](https://github.com/pixijs/pixi-haxe)
 
 ## Community
