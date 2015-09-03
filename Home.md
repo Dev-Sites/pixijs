@@ -1,4 +1,4 @@
-# Pixi Renderer000
+# Pixi Renderer
 
 JavaScript 2D Renderer
 
