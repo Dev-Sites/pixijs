@@ -9,6 +9,7 @@ Here are some plugins from the community for use with pixi v3:
 - [pixi_ui][pixi_ui] - A GUI library for theming, skins, text input, scroll bars...
 - [pixi-dragonbones][drag] - Adds support for dragon bones animations.
 - [pixi-extra-filters][exf] - Adds some extra community-made filters to pixi.
+- [pixi-particles][part] - Adds particle systems to pixi.js
 
 [cotxt]: https://github.com/JiDW/pixi-cocoontext
 [spine]: https://github.com/pixijs/pixi-spine
@@ -17,3 +18,4 @@ Here are some plugins from the community for use with pixi v3:
 [pixi_ui]: https://github.com/brean/pixi_ui
 [drag]: https://github.com/cinkonaap/pixi-dragonbones
 [exf]: https://github.com/pixijs/pixi-extra-filters
+[part]: https://github.com/CloudKidStudio/PixiParticles
