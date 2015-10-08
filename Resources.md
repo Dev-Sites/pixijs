@@ -4,7 +4,7 @@ All things pixi such as overview, tutorials, projects and examples can be found 
 
 ## Guides and Tutorials
 
-[Getting Started](http://www.goodboydigital.com/pixi-js-tutorial-getting-started/)
+[Learning Pixi.js](https://github.com/kittykatattack/learningPixi)
 
 ### Interactivity
 
