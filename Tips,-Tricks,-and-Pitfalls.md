@@ -13,12 +13,14 @@ There are two forms of masking supported: "vector" masking which uses a `Graphic
 1. Draw the shape with a Graphics object, call `graphics.generateTexture()` and then use that texture to create a new `Sprite`.
 2. Draw the desired mask to a `<canvas/>` element, then create a texture from that canvas with `Texture.fromCanvas(canvas);`
 
-References: [`Texture.fromCanvas`][Texture.fromCanvas]
+References: [`Texture.fromCanvas`][Texture.fromCanvas], [`Graphics`][Graphics], [`DisplayObject.generateTexture`][DisplayObject.generateTexture], [`DisplayObject.mask`][DisplayObject.mask]
 
 
 
 
-
+[Graphics]: http://pixijs.github.io/docs/PIXI.Graphics.html
+[DisplayObject.mask]: http://pixijs.github.io/docs/PIXI.DisplayObject.html#mask
+[DisplayObject.generateTexture]: http://pixijs.github.io/docs/PIXI.DisplayObject.html#generateTexture
 [Texture.destroy]: http://pixijs.github.io/docs/PIXI.Texture.html#destroy
 [BaseTexture.destroy]: http://pixijs.github.io/docs/PIXI.BaseTexture.html#destroy
 [Texture.fromCanvas]: http://pixijs.github.io/docs/PIXI.Texture.html#.fromCanvas
