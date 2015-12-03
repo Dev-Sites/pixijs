@@ -4,7 +4,7 @@ All PIXI objects have a `.destroy()` method that cleans up any references it hol
 
 When destroying textures, make sure to consider if you need to also destroy the BaseTexture that it uses to represent the source image. If so, you need to pass `true` as the first parameter to ensure that WebGL and CPU memory for the base image is also cleaned up.
 
-References: [`Texture.prototype.destroy`][Texture.destroy], [`BaseTexture.prototype.destroy`][BaseTexture.destroy]
+References: [`Texture.destroy`][Texture.destroy], [`BaseTexture.destroy`][BaseTexture.destroy]
 
 ### Masking 
 
