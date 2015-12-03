@@ -13,7 +13,7 @@ There are two forms of masking supported: "vector" masking which uses a `Graphic
 1. Draw the shape with a Graphics object, call `graphics.generateTexture()` and then use that texture to create a new `Sprite`.
 2. Draw the desired mask to a `<canvas/>` element, then create a texture from that canvas with `Texture.fromCanvas(canvas);`
 
-References: [`Texture.fromCanvas`][`Texture.fromCanvas`]
+References: [`Texture.fromCanvas`][Texture.fromCanvas]
 
 
 
