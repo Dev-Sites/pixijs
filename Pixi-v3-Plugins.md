@@ -22,4 +22,4 @@ Here are some plugins from the community for use with pixi v3:
 [gown.js]: https://github.com/brean/gown.js
 [drag]: https://github.com/cinkonaap/pixi-dragonbones
 [exf]: https://github.com/pixijs/pixi-extra-filters
-[part]: https://github.com/CloudKidStudio/PixiParticles
+[part]: https://github.com/pixijs/pixi-particles
