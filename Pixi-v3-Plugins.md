@@ -10,6 +10,10 @@ Here are some plugins from the community for use with pixi v3:
 - [pixi-dragonbones][drag] - Adds support for dragon bones animations.
 - [pixi-extra-filters][exf] - Adds some extra community-made filters to pixi.
 - [pixi-particles][part] - Adds particle systems to pixi.js
+- [pixi-tween](https://github.com/Nazariglez/pixi-tween) - Tween animations
+- [pixi-audio](https://github.com/Nazariglez/pixi-audio) - Add audio support using the pixi.js resource-loader.
+- [pixi-keyboard](https://github.com/Nazariglez/pixi-keyboard) - Add keyboard support to manage the keyboard events easily
+- [pixi-timer](https://github.com/Nazariglez/pixi-timer) - Create time events easily.
 
 [cotxt]: https://github.com/JiDW/pixi-cocoontext
 [spine]: https://github.com/pixijs/pixi-spine
