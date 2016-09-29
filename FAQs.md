@@ -2,18 +2,29 @@
 
 Pixi automatically builds using http://travis-ci.org and uploads those builds to our S3 servers. The latest build for each branch (and tag) is kept there. You can download the latest build for any branch (or tag) with the following urls:
 
+Unminified:
+
 ```
 http://pixi-builds.s3-website-eu-west-1.amazonaws.com/<branch-or-tag-name>/pixi.js
+http://pixi-builds.s3-website-eu-west-1.amazonaws.com/<branch-or-tag-name>/pixi.js.map
+```
+
+Minified:
+
+```
 http://pixi-builds.s3-website-eu-west-1.amazonaws.com/<branch-or-tag-name>/pixi.min.js
+http://pixi-builds.s3-website-eu-west-1.amazonaws.com/<branch-or-tag-name>/pixi.min.js.map
 ```
 
 For example, to download the latest unstable `dev` build:
 
 - http://pixi-builds.s3-website-eu-west-1.amazonaws.com/dev/pixi.js
+- http://pixi-builds.s3-website-eu-west-1.amazonaws.com/dev/pixi.js.map
 
 Or the latest release build:
 
 - http://pixi-builds.s3-website-eu-west-1.amazonaws.com/release/pixi.min.js
+- http://pixi-builds.s3-website-eu-west-1.amazonaws.com/release/pixi.min.js.map
 
 ## How do I run the pixi.js locally?
 
