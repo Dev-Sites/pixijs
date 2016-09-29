@@ -21,7 +21,7 @@ For example, to download the latest unstable `dev` build:
 - http://pixi-builds.s3-website-eu-west-1.amazonaws.com/dev/pixi.js
 - http://pixi-builds.s3-website-eu-west-1.amazonaws.com/dev/pixi.js.map
 
-Or the latest release build:
+Or the latest `release` build:
 
 - http://pixi-builds.s3-website-eu-west-1.amazonaws.com/release/pixi.min.js
 - http://pixi-builds.s3-website-eu-west-1.amazonaws.com/release/pixi.min.js.map
