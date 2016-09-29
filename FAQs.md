@@ -1,8 +1,25 @@
-#### How do I run the pixi.js locally?
+## Where can I get a build?
+
+Pixi automatically builds using http://travis-ci.org and uploads those builds to our S3 servers. The latest build for each branch (and tag) is kept there. You can download the latest build for any branch (or tag) with the following urls:
+
+```
+http://pixi-builds.s3-website-eu-west-1.amazonaws.com/<branch-or-tag-name>/pixi.js
+http://pixi-builds.s3-website-eu-west-1.amazonaws.com/<branch-or-tag-name>/pixi.min.js
+```
+
+For example, to download the latest unstable `dev` build:
+
+- http://pixi-builds.s3-website-eu-west-1.amazonaws.com/dev/pixi.js
+
+Or the latest release build:
+
+- http://pixi-builds.s3-website-eu-west-1.amazonaws.com/release/pixi.min.js
+
+## How do I run the pixi.js locally?
 
 If you are using the canvas renderer things will run fine :) However due to the nature of webGL's security restrictions, the webGL renderer will not work locally without a little help. Here's some tips that will help you out: https://github.com/mrdoob/three.js/wiki/How-to-run-things-locally
 
-#### What browsers are supported?
+## What browsers are supported?
 
 Browsers supported by the CanvasRenderer:
 - IE 9+,
