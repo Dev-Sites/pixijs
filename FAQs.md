@@ -5,26 +5,26 @@ Pixi automatically builds using http://travis-ci.org and uploads those builds to
 Unminified:
 
 ```
-http://pixi-builds.s3-website-eu-west-1.amazonaws.com/<branch-or-tag-name>/pixi.js
-http://pixi-builds.s3-website-eu-west-1.amazonaws.com/<branch-or-tag-name>/pixi.js.map
+https://s3-eu-west-1.amazonaws.com/pixi-builds/<branch-or-tag-name>/pixi.js
+https://s3-eu-west-1.amazonaws.com/pixi-builds/<branch-or-tag-name>/pixi.js.map
 ```
 
 Minified:
 
 ```
-http://pixi-builds.s3-website-eu-west-1.amazonaws.com/<branch-or-tag-name>/pixi.min.js
-http://pixi-builds.s3-website-eu-west-1.amazonaws.com/<branch-or-tag-name>/pixi.min.js.map
+https://s3-eu-west-1.amazonaws.com/pixi-builds/<branch-or-tag-name>/pixi.min.js
+https://s3-eu-west-1.amazonaws.com/pixi-builds/<branch-or-tag-name>/pixi.min.js.map
 ```
 
 For example, to download the latest unstable `dev` build:
 
-- http://pixi-builds.s3-website-eu-west-1.amazonaws.com/dev/pixi.js
-- http://pixi-builds.s3-website-eu-west-1.amazonaws.com/dev/pixi.js.map
+- https://s3-eu-west-1.amazonaws.com/pixi-builds/dev/pixi.js
+- https://s3-eu-west-1.amazonaws.com/pixi-builds/dev/pixi.js.map
 
 Or the latest `release` build:
 
-- http://pixi-builds.s3-website-eu-west-1.amazonaws.com/release/pixi.min.js
-- http://pixi-builds.s3-website-eu-west-1.amazonaws.com/release/pixi.min.js.map
+- https://s3-eu-west-1.amazonaws.com/pixi-builds/release/pixi.min.js
+- https://s3-eu-west-1.amazonaws.com/pixi-builds/release/pixi.min.js.map
 
 ## How do I run the pixi.js locally?
 
