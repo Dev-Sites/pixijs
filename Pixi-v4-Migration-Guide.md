@@ -1,5 +1,13 @@
 For those upgrading from v3 to v4 of PIXI.
 
+### Black sprites
+
+If sprites are black or flickering, this might help for some devices:
+
+```js
+PIXI.glCore.VertexArrayObject.FORCE_NATIVE = true;
+```
+
 ### Texture
 
 Textures are [clamped by default](http://www.html5gamedevs.com/topic/24778-displacementfilter-not-repeating-when-moving-displacement-sprite/), in v3 they were repeated. 
