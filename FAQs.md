@@ -23,8 +23,8 @@ For example, to download the latest unstable `dev` build:
 
 Or the latest `release` build:
 
-- https://pixijs.download/release/pixi.min.js
-- https://pixijs.download/release/pixi.min.js.map
+- http://pixijs.download/release/pixi.min.js
+- http://pixijs.download/release/pixi.min.js.map
 
 ## How do I run the pixi.js locally?
 
