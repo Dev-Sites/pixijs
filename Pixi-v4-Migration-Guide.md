@@ -24,6 +24,8 @@ You have to use `mappedMatrix` to convert `textureCoord` to `mapCoord`, all beca
 
 Use `filterClamp` uniform to prevent bad things on edges (`inputCoord.xy`, `filterClamp.xy`, `filterClamp.zw`) , displacement and blur are good examples for that. See [forum post](http://www.html5gamedevs.com/topic/24347-weird-filterareas-size-on-v4/) for more information.
 
+`filter.uniforms` now contains a direct map of uniform names to uniform values. Custom uniform data (mapping with objects specifying uniform `type` and `value`) is now stored in `filter.uniformData`.
+
 ### DisplayObject
 
 Setting the position of a DisplayObject no longer maintain the reference to the Point. The values of the point are assigned to the transform of the DisplayObject. For instance:
