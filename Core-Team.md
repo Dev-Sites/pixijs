@@ -4,13 +4,13 @@ The Core Team is comprised of a handful of dedicated individuals who volunteer t
 
 |Name|Role|Location|Github|Twitter|
 |---|---|---|---|---|
-|**Mat Groves**|Owner, Creator|London, UK 🇬🇧 |[@GoodBoyDigital](https://github.com/GoodBoyDigital)|[@doormat23](https://twitter.com/doormat23)|
+|**Mat Groves**|Owner, Creator|London 🇬🇧 |[@GoodBoyDigital](https://github.com/GoodBoyDigital)|[@doormat23](https://twitter.com/doormat23)|
 |**Chad Engler**|Owner|Irvine, CA 🇺🇸 |[@englercj](https://github.com/englercj)|[@rolnaaba](https://twitter.com/rolnaaba)|
 |**Matt Karl**|Owner|Boston, MA 🇺🇸 |[@bigtimebuddy](https://github.com/bigtimebuddy)|[@bigtimebuddy](https://twitter.com/bigtimebuddy)|
-|**Ivan Popelyshev**|Member|Moscow, RU 🇷🇺 |[@ivanpopelyshev](https://github.com/ivanpopelyshev)|[@ivanpopelyshev](https://twitter.com/ivanpopelyshev)|
-|**Dave Moore**|Member|Birmingham, UK 🇬🇧 |[@themoonrat](https://github.com/themoonrat)|[@themoonrat](https://twitter.com/themoonrat)|
-|**Stafford Williams**|Member|Sydney, AU 🇦🇺 |[@staff0rd](https://github.com/staff0rd)|[@staff0rd](https://twitter.com/staff0rd)|
-|**Andrew Start**|Member|Boston, MA, USA 🇺🇸 |[@andrewstart](https://github.com/andrewstart)||
+|**Ivan Popelyshev**|Member|Moscow 🇷🇺 |[@ivanpopelyshev](https://github.com/ivanpopelyshev)|[@ivanpopelyshev](https://twitter.com/ivanpopelyshev)|
+|**Dave Moore**|Member|Birmingham 🇬🇧 |[@themoonrat](https://github.com/themoonrat)|[@themoonrat](https://twitter.com/themoonrat)|
+|**Stafford Williams**|Member|Sydney 🇦🇺 |[@staff0rd](https://github.com/staff0rd)|[@staff0rd](https://twitter.com/staff0rd)|
+|**Andrew Start**|Member|Boston, MA 🇺🇸 |[@andrewstart](https://github.com/andrewstart)||
 
 ## Roles
 
