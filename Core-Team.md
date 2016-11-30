@@ -2,39 +2,15 @@
 
 The Core Team is comprised of a handful of dedicated individuals who volunteer their time to make Pixi.js better. None of the Core Team is paid directly to develop Pixi.js, but for many members it is closely related with their professional day-jobs. 
 
-### Mat Groves (creator, owner)
-* London, UK 🇬🇧 
-* Github: [@GoodBoyDigital](https://github.com/GoodBoyDigital)
-* Twitter: [@doormat23](https://twitter.com/doormat23)
-
-### Chad Engler (owner)
-* Irvine, CA 🇺🇸 
-* Github: [@englercj](https://github.com/englercj)
-* Twitter: [@rolnaaba](https://twitter.com/rolnaaba)
-
-### Matt Karl (owner)
-* Boston, MA 🇺🇸 
-* Github: [@bigtimebuddy](https://github.com/bigtimebuddy)
-* Twitter: [@bigtimebuddy](https://twitter.com/bigtimebuddy)
-
-### Ivan Popelyshev 
-* Moscow, RU 🇷🇺 
-* Github: [@ivanpopelyshev](https://github.com/ivanpopelyshev)
-* Twitter: [@ivanpopelyshev](https://twitter.com/ivanpopelyshev)
-
-### Dave Moore 
-* Birmingham, UK 🇬🇧 
-* Github: [@themoonrat](https://github.com/themoonrat)
-* Twitter: [@themoonrat](https://twitter.com/themoonrat)
-
-### Stafford Williams 
-* Sydney, AU 🇦🇺 
-* Github: [@staff0rd](https://github.com/staff0rd)
-* Twitter: [@staff0rd](https://twitter.com/staff0rd)
-
-### Andrew Start
-* Boston, MA, USA 🇺🇸 
-* Github: [@andrewstart](https://github.com/andrewstart)
+|Name|Role|Location|Github|Twitter|
+|---|---|---|---|---|
+|**Mat Groves**|Owner, Creator|London, UK 🇬🇧 |[@GoodBoyDigital](https://github.com/GoodBoyDigital)|[@doormat23](https://twitter.com/doormat23)|
+|**Chad Engler**|Owner|Irvine, CA 🇺🇸 |[@englercj](https://github.com/englercj)|[@rolnaaba](https://twitter.com/rolnaaba)|
+|**Matt Karl**|Owner|Boston, MA 🇺🇸 |[@bigtimebuddy](https://github.com/bigtimebuddy)|[@bigtimebuddy](https://twitter.com/bigtimebuddy)|
+|**Ivan Popelyshev**|Member|Moscow, RU 🇷🇺 |[@ivanpopelyshev](https://github.com/ivanpopelyshev)|[@ivanpopelyshev](https://twitter.com/ivanpopelyshev)|
+|**Dave Moore**|Member|Birmingham, UK 🇬🇧 |[@themoonrat](https://github.com/themoonrat)|[@themoonrat](https://twitter.com/themoonrat)|
+|**Stafford Williams**|Member|Sydney, AU 🇦🇺 |[@staff0rd](https://github.com/staff0rd)|[@staff0rd](https://twitter.com/staff0rd)|
+|**Andrew Start**|Member|Boston, MA, USA 🇺🇸 |[@andrewstart](https://github.com/andrewstart)||
 
 ## Roles
 
