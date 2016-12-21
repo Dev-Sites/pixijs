@@ -1,7 +1,8 @@
 ## Plugins
 
-Here are some plugins from the community for use with pixi v3:
+Here are some plugins from the community for use with pixi v3 & v4:
 
+- [pixi-action][action & animation] - For easily action and animation, like cocos2d-x.
 - [pixi-spine][spine] - Adds support for spine animations.
 - [pixi-tiled][tiled] - Adds support for importing Tiled Editor tilemaps into pixi.
 - [pixi-cocoontext][cotxt] - Optimizes text for use with cocoonjs.
