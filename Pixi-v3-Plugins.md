@@ -16,6 +16,7 @@ Here are some plugins from the community for use with pixi v3 & v4:
 - [pixi-keyboard](https://github.com/Nazariglez/pixi-keyboard) - Add keyboard support to manage the keyboard events easily
 - [pixi-timer](https://github.com/Nazariglez/pixi-timer) - Create time events easily.
 
+[action & animation]: https://github.com/hustcc/pixi-action
 [cotxt]: https://github.com/JiDW/pixi-cocoontext
 [spine]: https://github.com/pixijs/pixi-spine
 [tiled]: https://github.com/beeglebug/pixi-tiled
