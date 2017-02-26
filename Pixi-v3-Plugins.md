@@ -23,7 +23,7 @@ Here are some plugins from the community for use with pixi v3 & v4:
 [live2d]: https://github.com/avgjs/pixi-live2d
 [tiled]: https://github.com/beeglebug/pixi-tiled
 [ezgui]: https://github.com/Ezelia/EZGUI
-[gown.js]: https://github.com/brean/gown.js
+[gown.js]: https://github.com/GreyRook/gown.js
 [drag]: https://github.com/cinkonaap/pixi-dragonbones
 [exf]: https://github.com/pixijs/pixi-extra-filters
 [part]: https://github.com/pixijs/pixi-particles
