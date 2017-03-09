@@ -1,34 +1,30 @@
 ## Where can I get a build?
 
-Pixi automatically builds using http://travis-ci.org and uploads those builds to our S3 servers. The latest build for each branch (and tag) is kept there. You can download the latest build for any branch (or tag) with the following urls:
+Pixi automatically builds using http://travis-ci.org and uploads those builds to our S3 servers. The latest build for each branch (and tag) is kept there. You can download the latest build for any branch (or tag) with the following URLs:
 
 Unminified:
 
 ```
-http://pixijs.download/<branch-or-tag-name>/pixi.js
-http://pixijs.download/<branch-or-tag-name>/pixi.js.map
+https://pixijs.download/<branch-or-tag-name>/pixi.js
+https://pixijs.download/<branch-or-tag-name>/pixi.js.map
 ```
 
 Minified:
 
 ```
-http://pixijs.download/<branch-or-tag-name>/pixi.min.js
-http://pixijs.download/<branch-or-tag-name>/pixi.min.js.map
+https://pixijs.download/<branch-or-tag-name>/pixi.min.js
+https://pixijs.download/<branch-or-tag-name>/pixi.min.js.map
 ```
 
 For example, to download the latest unstable `dev` build:
 
-- http://pixijs.download/dev/pixi.js
-- http://pixijs.download/dev/pixi.js.map
+- https://pixijs.download/dev/pixi.js
+- https://pixijs.download/dev/pixi.js.map
 
 Or the latest `release` build:
 
-- http://pixijs.download/release/pixi.min.js
-- http://pixijs.download/release/pixi.min.js.map
-
-If you *need* SSL (like for a codepen or jsfiddle), then you can use our CloudFront URL instead:
-
-- https://d157l7jdn8e5sf.cloudfront.net/dev/pixi.js
+- https://pixijs.download/release/pixi.min.js
+- https://pixijs.download/release/pixi.min.js.map
 
 ## How do I run the pixi.js locally?
 
