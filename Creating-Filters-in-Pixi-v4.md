@@ -62,7 +62,7 @@ One small problem: these values can become wrong when PIXI tries to fit the filt
 Please use this line to fix it:
 
 ```js
-filter.dontFit = true;
+filter.fitToDestination = false;
 ```
 
 # Bleeding problem
