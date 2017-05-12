@@ -52,6 +52,11 @@
 - Do not need apply to sprites as they are already textures
 - Do not use if the object where its children are constantly changing as this will slow things down
 
+## Measuring
+- Constantly getting the width and height of objects can be slow for complex objects. 
+- Getting width and heights of Sprites is fast!
+- If an object does not change often, use and store the bounds of an object by calling ```myObject.getBounds()``` 
+
 ## Interaction
 - If an object has no interactive children use `interactiveChildren = false` the interaction manager will then be able to avoid crawling through the object.
 - Set `hitArea = new PIXI.Rectangle(x,y,w,h)`. As above should stop the interaction manager from crawling through the object.
