@@ -24,6 +24,10 @@
 - If you plan to destroyed more than one at once add a random delay to their destruction to remove freezing.
 - delayed texture destroy if you plan to delete a lot of textures yourself.
 
+## Tinting
+- Tinting is totally FREE in the WebGL renderer, there is literally no overhead. So go nuts!
+- Tinting has a one time setup cost when using the canvas renderer per texture. Animating tints can be slow on the canvas renderer.
+
 ## Text
 - Avoid changing it on every frame as this can be expensive (each time it draws to a canvas and then uploads to GPU)
 - Bitmap Text gives much better performance for dynamically changing text. 
