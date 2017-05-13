@@ -1,9 +1,11 @@
 ## Global
 - Only optimize when you need to! PIXI can handle a fair amount of content off the bat.
+- The WebGL renderer is way faster than the canvas renderer. Use WebGL where you can!
 - Be mindful of the complexity of your scene. The more objects you add the slower things will end up.
-- Order can help, for example sprite / graphic / sprite / graphic is slower than sprite / sprite / graphic / graphic
+- Pixi renders things from back to front in the order they appear in the scene
+- Being mindful of this order can help, for example sprite / graphic / sprite / graphic is slower than sprite / sprite / graphic / graphic.
 - Some older mobile devices run things a little slower. passing in the option 'legacy:true' to the renderer can help with performance
-- Culling, PIXI does not cull anything, we have left this to you and you application. 
+- Culling, PIXI does not cull anything, we have left this to you and your application. 
 
 ## Sprites
 - Use spritesheets where possible to minimize total textures
