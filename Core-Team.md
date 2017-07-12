@@ -5,7 +5,7 @@ The Core Team is comprised of a handful of dedicated individuals who volunteer t
 |Name|Role|Country|Github|Twitter|
 |---|---|:---:|---|---|
 |**Mat Groves**|Owner, Creator|🇬🇧 |[@GoodBoyDigital](https://github.com/GoodBoyDigital)|[@doormat23](https://twitter.com/doormat23)|
-|**Chad Engler**|Owner|🇺🇸 |[@englercj](https://github.com/englercj)|[@rolnaaba](https://twitter.com/rolnaaba)|
+|**Chad Engler**|Owner|:us: |[@englercj](https://github.com/englercj)|[@rolnaaba](https://twitter.com/rolnaaba)|
 |**Matt Karl**|Owner|🇺🇸 |[@bigtimebuddy](https://github.com/bigtimebuddy)|[@bigtimebuddy](https://twitter.com/bigtimebuddy)|
 |**Ivan Popelyshev**|Member|🇷🇺 |[@ivanpopelyshev](https://github.com/ivanpopelyshev)|[@ivanpopelyshev](https://twitter.com/ivanpopelyshev)|
 |**Dave Moore**|Member|🇬🇧 |[@themoonrat](https://github.com/themoonrat)|[@themoonrat](https://twitter.com/themoonrat)|
