@@ -22,3 +22,7 @@
         - Proposal: Materials (Coming Soon)
         - Proposal: Interactions (Coming Soon)
         - Proposal: Text (Coming Soon)
+        - Proposal: Generated Mesh (Coming Soon)
+        - Proposal: Return of The Stage (Coming Soon)
+        - Proposal: TextureResource (Coming Soon)
+        - Proposal: Fix the Filters! (Coming Soon)
