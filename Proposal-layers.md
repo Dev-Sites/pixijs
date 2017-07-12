@@ -2,7 +2,9 @@
 
 This page is dedicated to pain that countless people had when developing Flash and PIXI apps.
 
-The best explanation is about common use-case.
+The goal is to stay with our successful PIXI v4 API and stage architecture, and add many features at one time while making minimal changes. I suggest we don't make big changes in API that have less effect than this proposal.
+
+The best explanation is about common use-case. 
 
 ## Layering
 
