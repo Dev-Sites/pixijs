@@ -41,6 +41,8 @@ The problem with display groups is that we cant move elements inside filters or 
 
 Assume we have Stage with layer Camera and container World. Lets specify that `world.parentLayer = Camera` and add condition in camera's `renderWebGL` method that changes the current projectionMatrix. When we ask `renderer.render(camera)` it will actually render the world through a projection. Also, Camera can be placed anywhere in the world itself, we just have to make sure that `camera.parentLayer` is not camera itself.
 
+Its good for API, because renderer will be as simple as before, we just pass it camera instead of the stage.
+
 ## Batching 3d
 
 How can we have a smart batching in that case? Create a batcher container, assign `world.parentLayer=batcher`, and sort elements by their texture inside. Its very useful for 3d geometries that dont use alpha. It can be achieved without "Arrays.sort" too. The idea is that we don't complicate our low-level which is already over-complicated with multitexturing.
