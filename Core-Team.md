@@ -9,7 +9,7 @@ The Core Team is comprised of a handful of dedicated individuals who volunteer t
 |**Matt Karl**          | Owner             | :us:      | [@bigtimebuddy](https://github.com/bigtimebuddy)      | [@bigtimebuddy](https://twitter.com/bigtimebuddy)         |
 |**Ivan Popelyshev**    | Member            | :ru:      | [@ivanpopelyshev](https://github.com/ivanpopelyshev)  | [@ivanpopelyshev](https://twitter.com/ivanpopelyshev)     |
 |**Dave Moore**         | Member            | :gb:      | [@themoonrat](https://github.com/themoonrat)          | [@themoonrat](https://twitter.com/themoonrat)             |
-|**Stafford Williams**  | Member            | :au:      | [@staff0rd](https://github.com/staff0rd)              | [@staff0rd](https://twitter.com/staff0rd)                 |
+|**Stafford Williams**  | Member            | 🇦🇺        | [@staff0rd](https://github.com/staff0rd)              | [@staff0rd](https://twitter.com/staff0rd)                 |
 |**Andrew Start**       | Member            | :us:      | [@andrewstart](https://github.com/andrewstart)        |                                                           |
 
 ## Roles
