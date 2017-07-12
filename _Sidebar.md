@@ -15,6 +15,7 @@
     * [[Migration Guide|v4-Migration-Guide]]
     * [[Resources|v4-Resources]]
 - Version 5
+    * [[How to Write a Proposal|How-to-Write-a-Proposal]]
     * System Architecture (Coming Soon)
     * Feature Proposals
         - [[Proposal: Layers|v5-Proposal:-Layers]]
