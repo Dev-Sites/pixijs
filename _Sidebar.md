@@ -24,5 +24,5 @@
         - Proposal: Text (Coming Soon)
         - Proposal: Generated Mesh (Coming Soon)
         - Proposal: The Fellowship of the TextureResource (Coming Soon)
-        - Proposal: Two Filters (Coming Soon)
+        - Proposal: Double Filters (Coming Soon)
         - Proposal: Return of The Stage (Coming Soon)
