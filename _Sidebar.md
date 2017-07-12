@@ -1,9 +1,9 @@
 ## PixiJS
 
-![PixiJS Logo](/images/pixijs-logo-cropped.png)
-- [Home :house:](/Home.md)
-- [Team :flags:](/Core-Team.md)
-- [FAQs :question:](/FAQs.md)
+[[/images/pixijs-logo-cropped.png]]
+- [[Home :house:|/Home.md]]
+- [[Team :flags:|/Core-Team.md]]
+- [[FAQs :question:|/FAQs.md]]
 - Getting Started (Coming Soon)
 - [Website :rocket:](http://www.pixijs.com/)
 - [Releases :floppy_disk:](https://github.com/pixijs/pixi.js/releases)
