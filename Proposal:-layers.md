@@ -64,4 +64,4 @@ Relatively simple implementation that solves multiple difficult problems. The pl
 
 I don't know of other renderers that use same approach, I believe this is something new, and there will be many questions like "why did you do that instead of copying other engines". However, people who use it are very excited.
 
-Extra recursion `updateDisplay` can give us a problem, but I dont see how can we make other layers/renderQueue implementation that will have better speed. However, it can be solved if we use better stage, I will make separate containers improvements proposal. Actually, I already solved that problem in my projects, I'm working on documentation at the moment :)
+Extra recursion `updateDisplay` can give us a problem, but I dont see how can we make other layers/renderQueue implementation that will have better speed. However, it can be solved if we use better stage, I will make separate containers improvements proposal. Actually, I already solved that problem in my projects, I'm working on documentation and tests at the moment :)
