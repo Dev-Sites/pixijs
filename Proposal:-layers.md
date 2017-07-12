@@ -41,8 +41,27 @@ The problem with display groups is that we cant move elements inside filters or 
 
 Assume we have Stage with layer Camera and container World. Lets specify that `world.parentLayer = Camera` and add condition in camera's `renderWebGL` method that changes the current projectionMatrix. When we ask `renderer.render(camera)` it will actually render the world through a projection. Also, Camera can be placed anywhere in the world itself, we just have to make sure that `camera.parentLayer` is not camera itself.
 
+## Batching 3d
+
+How can we have a smart batching in that case? Create a batcher container, assign `world.parentLayer=batcher`, and sort elements by their texture inside. Its very useful for 3d geometries that dont use alpha. It can be achieved without "Arrays.sort" too. The idea is that we don't complicate our low-level which is already over-complicated with multitexturing.
+
+## Deferred.
+
+Layers approach also allows to emulate deffered rendering in 2d engine by adding multiple layers and camera and using filters on them. We don't have to describe deferred rendering on low-level and that's awesome.
+
 ## Implementation:
 
-Just displayGroups: https://github.com/pixijs/pixi-display
 Layers: https://github.com/pixijs/pixi-display/tree/layers
 Camera: no implementation yet.
+
+Demos: http://pixijs.github.io/examples/#/layers/lighting.js , http://pixijs.github.io/examples/#/layers/zorder.js
+
+## Pros
+
+Relatively simple implementation that solves multiple difficult problems.
+
+## Cons
+
+I don't know of other renderers that use same approach, I believe this is something new, and there will be many questions like "why did you do that instead of copying other engines". However, people who use it are very excited.
+
+Extra recursion `updateDisplay` can give us a problem, but I dont see how can we make other layers/renderQueue implementation that will have better speed. However, it can be solved if we use better stage, I will make separate containers improvements proposal.
