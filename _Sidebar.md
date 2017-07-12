@@ -17,7 +17,7 @@
 - Version 5
     * System Architecture (Coming Soon)
     * Feature Proposals
-        - [[Proposal: Layers|Proposal-Layers]]
+        - [[Proposal: Layers|v5-Proposal-Layers]]
         - Proposal: ECS (Coming Soon)
         - Proposal: Materials (Coming Soon)
         - Proposal: Interactions (Coming Soon)
