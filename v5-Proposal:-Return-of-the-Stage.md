@@ -3,7 +3,7 @@
 1. Child has no way to know whether parent was removed from the stage. 
 2. The Destroy API is horrible, we just ask people to maintain it on their side, but we dont give any tools to determine the moment object leaves the stage, and user has to implement refcounting on his side.
 3. There is no way to differentiate container from the root element, this flag is maintained by user.
-4. Recursive calls of add/remove complicates the stacktrace, and problems in remove/destroy appear too often, users see that mess.
+4. Recursive calls of add/remove complicates the stacktrace, and problems in remove/destroy appear too often, we cannot isolate them, user will see the mess anyway.
 
 Possible problems with naive implementations:
 
@@ -21,3 +21,5 @@ Possible problems with naive implementations:
 4. If subtree is added/removed to the stage, fire `added`/`removed` event through whole subtree and re-assign `stage` field for all elements.
 5. Add `detachChild` method that does not fire `removed` but adds whole subtree to special stage's `detached` set of elements, that can be removed on next frame, if user says so, or if special flag is enabled. Calling "addChild" on detached elements adds them back, without `added` signal/event.
 6. Add/remove/detach works like in pixi-v4 when there is no Stage parent. Allow free modification of `children` in that case.
+7. If the stage added inside another stage, it behaves as a single element: no recursive `added`/`removed`.
+8. All those manipulations must use BFS (queue) instead of recursion. It simplifies the debug process for users.
