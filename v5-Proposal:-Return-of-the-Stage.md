@@ -11,6 +11,7 @@ Possible problems with naive implementations:
 2. Any simple manipulation within the stage, like moving an element from one subtree to another will fire those events and possibly trigger some destroy sequence.
 3. If we just add special flag in "removeChild" that won't be good because people are having problems searching that flag in [cocos2d engine](http://discuss.cocos2d-x.org/t/why-removefromparent-removechild-could-be-dangerous/32223), its not intuitive.
 4. Porting old code may be difficult if we force usage of the stage. We must ensure compatibility with old "container as root" approach.
+5. There might be cases with multiple stages inside each other. We have to resolve it somehow, stage needs to know about its `parentStage`.
 
 ## Solution
 
