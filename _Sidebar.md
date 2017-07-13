@@ -1,5 +1,3 @@
-<div align="center">
-
 [[/images/pixijs-logo-cropped.png]]
 
 [[:house: Home|Home]]
@@ -15,8 +13,6 @@
 [:floppy_disk: Releases](https://github.com/pixijs/pixi.js/releases)
 
 [:moneybag: Donate](https://www.patreon.com/user?u=2384552)
-
-</div>
 
 **Version 4**
 - [[Tips, Tricks, and Pitfalls|v4-Tips,-Tricks,-and-Pitfalls]]
