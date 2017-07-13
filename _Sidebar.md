@@ -1,12 +1,22 @@
+<div align="center">
+
 [[/images/pixijs-logo-cropped.png]]
 
-- [[:house: Home|Home]]
-- [[:family_man_woman_girl_boy: Team|Core-Team]]
-- [[:question: FAQs|FAQs]]
-- :beginner: Getting Started (Coming Soon)
-- [:rocket: Website](http://www.pixijs.com/)
-- [:floppy_disk: Releases](https://github.com/pixijs/pixi.js/releases)
-- [:moneybag: Donate](https://www.patreon.com/user?u=2384552)
+[[:house: Home|Home]]
+
+[[:family_man_woman_girl_boy: Team|Core-Team]]
+
+[[:question: FAQs|FAQs]]
+
+[[:beginner: Getting Started|Getting-Started]]
+
+[:rocket: Website](http://www.pixijs.com/)
+
+[:floppy_disk: Releases](https://github.com/pixijs/pixi.js/releases)
+
+[:moneybag: Donate](https://www.patreon.com/user?u=2384552)
+
+</div>
 
 **Version 4**
 - [[Tips, Tricks, and Pitfalls|v4-Tips,-Tricks,-and-Pitfalls]]
