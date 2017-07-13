@@ -25,7 +25,7 @@ Let's assume that we added special `display component` to DisplayObject to solve
 4. **Performance: Better than -azer**: if there are N objects of K different type, and objects of each type are not supposed to be sorted with each other (or they are pre-sorted), total time per frame must be O(N + K log K), and not O (N log N). 10000 bunnies and 10000 of their shadows must not lead to sorting of 20000 elements.
 5. **Tree invariants**: object rendering order is affected by position of that object in pixi stage tree and display component of nearest parent that has it. Thus, component may change order of the whole subtree, but it does not affect neighbour subtrees.
 6. **No Surprises-2: Interaction**: no heavy changes in interaction. We already had too many problems with it. Just enumerate objects with `displayOrder` and use this number in `processInteractive`.
-6. **Filters/masks**: Some rendering features require push/pop when entering/leaving a tree node, and that's why we cant just make everything flat. There must be a way to put object inside the filtered container in render-time.
+6. **Filters/masks cooperation**: Some rendering features require push/pop when entering/leaving a tree node, and that's why we cant just make everything flat. There must be a way to put object inside the filtered container in render-time.
 7. **Performance: is it a farm or shooter?** There must be fully dynamic option (compute lists every frame), and there might be static option (compute lists at components change).
 
 ## Solution
