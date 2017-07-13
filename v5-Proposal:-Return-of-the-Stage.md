@@ -19,4 +19,4 @@ Possible problems with naive implementations:
 3. Stage is Container that must store all its children in set by their ID. Elements store a link to the stage they were added.
 4. If subtree is added/removed to the stage, fire `added`/`removed` event through whole subtree and re-assign `stage` field for all elements.
 5. Add `detachChild` method that does not fire `removed` but adds whole subtree to special stage's `detached` set of elements, that can be removed on next frame, if user says so, or if special flag is enabled. Calling "addChild" on detached elements adds them back, without `added` signal/event.
-6. Add/remove/detach works like in pixi-v4 when there is no Stage parent.
+6. Add/remove/detach works like in pixi-v4 when there is no Stage parent. Allow free modification of `children` in that case.
