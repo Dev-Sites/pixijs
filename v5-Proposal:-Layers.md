@@ -75,7 +75,7 @@ Camera: no implementation yet.
 
 Demos: http://pixijs.github.io/examples/#/layers/lighting.js , http://pixijs.github.io/examples/#/layers/zorder.js
 
-### Adopters
+## Early Adopters
 
 @bQvle , http://tankwars.io/
 
