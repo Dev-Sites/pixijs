@@ -14,7 +14,7 @@ Possible problems with naive implementations:
 
 ## Solution
 
-1. Put big sign for users to not to add/remove children directly through "children" property.
+1. Put big sign for users **DO NOT MODIFY `children` PROPERTY**.
 2. Mark all display objects with UniqueID
 3. Stage is Container that must store all its children in set by their ID. Elements store a link to the stage they were added.
 4. If subtree is added/removed to the stage, fire `added`/`removed` event through whole subtree and re-assign `stage` field for all elements.
