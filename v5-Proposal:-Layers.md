@@ -77,7 +77,7 @@ Demos: http://pixijs.github.io/examples/#/layers/lighting.js , http://pixijs.git
 
 ### Adopters
 
-@bqvle, http://tankwars.io/
+@bQvle , http://tankwars.io/
 
 ## Pros
 
