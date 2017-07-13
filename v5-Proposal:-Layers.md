@@ -19,7 +19,7 @@ Simple game can easily have 5-10 types of child objects, and managing them witho
 
 Let's assume that we added special `display component` to DisplayObject to solve the problem.
 
-1. **Its a stage problem**: Renderer-level must not be affected, all major changes must happen in the stage. Renderer just does not have enough information to handle it, because filters.
+1. **Its a stage problem**: Renderer-level must not be affected, all major changes must happen in the stage. Renderer just does not have enough information to handle it, because of filters.
 2. **Traditions**: Without component, stage and interaction behaviour must be the same as before. Except some corner cases that we can sacrifice (renderable=false, alpha=0).
 3. **No Surprises**: Component must not affect `container.children` and their order. All manipulations must be done in special render lists, in recursive function that is separate from `updateTransform` and `renderWebGL`.
 4. **Performance: Better than -azer**: if there are N objects of K different type, and objects of each type are not supposed to be sorted with each other (or they are pre-sorted), total time per frame must be O(N + K log K), and not O (N log N). 10000 bunnies and 10000 of their shadows must not lead to sorting of 20000 elements.
