@@ -79,6 +79,8 @@ Demos: http://pixijs.github.io/examples/#/layers/lighting.js , http://pixijs.git
 
 @bQvle , http://tankwars.io/
 
+@Dairnon (slack @anisoft), https://www.youtube.com/watch?v=SzqgMfZar4I
+
 ## Pros
 
 Relatively simple implementation that solves multiple difficult problems. The plugin exists for a year, and people love it.
