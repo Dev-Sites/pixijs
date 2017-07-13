@@ -19,13 +19,13 @@ Simple game can easily have 5-10 types of child objects, and managing them witho
 
 Let's assume that we added special `display component` to DisplayObject to solve the problem.
 
-1. Renderer-level must not be affected, all major changes must happen in the stage.
-2. Without component, stage and interaction behaviour must be the same as before. Except some corner cases that we can sacrifice (renderable=false, alpha=0).
-3. Component must not affect `container.children` and their order. All manipulations must be done in special render lists. 
-4. Performance: if there are N objects of K different type, and objects of each type are not supposed to be sorted with each other (or they are pre-sorted), total time per frame must be O(N + K log K), and not O (N log N). 10000 bunnies and 10000 of their shadows must not lead to sorting of 20000 elements.
-5. Tree invariants: object rendering order is affected by position of that object in pixi stage tree and display component of nearest parent that has it. Thus, component may change order of the whole subtree, but it does not affect neighbour subtrees.
-6. Filters/masks: Some rendering features require push/pop when entering/leaving a tree node, and that's why we cant just make everything flat. There must be a way to put object inside the filtered container in render-time.
-7. There must be fully dynamic option (compute lists every frame), and there might be static option (compute lists at components change).
+1. **Its a stage problem**: Renderer-level must not be affected, all major changes must happen in the stage.
+2. **Traditions**: Without component, stage and interaction behaviour must be the same as before. Except some corner cases that we can sacrifice (renderable=false, alpha=0).
+3. **No Surprises**: Component must not affect `container.children` and their order. All manipulations must be done in special render lists. 
+4. **Performance**: if there are N objects of K different type, and objects of each type are not supposed to be sorted with each other (or they are pre-sorted), total time per frame must be O(N + K log K), and not O (N log N). 10000 bunnies and 10000 of their shadows must not lead to sorting of 20000 elements.
+5. **Tree invariants**: object rendering order is affected by position of that object in pixi stage tree and display component of nearest parent that has it. Thus, component may change order of the whole subtree, but it does not affect neighbour subtrees.
+6. **Filters/masks**: Some rendering features require push/pop when entering/leaving a tree node, and that's why we cant just make everything flat. There must be a way to put object inside the filtered container in render-time.
+7. **Performance per frame or per action** There must be fully dynamic option (compute lists every frame), and there might be static option (compute lists at components change).
 
 ## Solution
 
