@@ -26,7 +26,7 @@
 - [[How to Write a Proposal|How-to-Write-a-Proposal]]
 - System Architecture (Coming Soon)
 - Feature Proposals
-    - [[Proposal: Layers|v5-Proposal:-Layers]]
+    - [[Proposal: Layers|v5-Proposal,-Layers]]
     - Proposal: ECS (Coming Soon)
     - Proposal: Materials (Coming Soon)
     - Proposal: Interactions (Coming Soon)
@@ -34,4 +34,4 @@
     - Proposal: Generated Mesh (Coming Soon)
     - Proposal: TextureResource (Coming Soon)
     - Proposal: Inner and Outer Filters (Coming Soon)
-    -[[Proposal: Return of The Stage|v5-Proposal:-Return-of-the-Stage]]
+    -[[Proposal: Return of The Stage|v5-Proposal,-Return-of-the-Stage]]
