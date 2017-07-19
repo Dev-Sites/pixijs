@@ -34,4 +34,4 @@
     - Proposal: Generated Mesh (Coming Soon)
     - Proposal: TextureResource (Coming Soon)
     - Proposal: Inner and Outer Filters (Coming Soon)
-    -[[Proposal: Return of The Stage|v5-Proposal,-Return-of-the-Stage]]
+    - [[Proposal: Return of The Stage|v5-Proposal,-Return-of-the-Stage]]
