@@ -28,7 +28,7 @@
 - Feature Proposals
     - [[Proposal: Layers|v5-Proposal,-Layers]]
     - Proposal: ECS (Coming Soon)
-    - Proposal: Materials (Coming Soon)
+    - [[[WIP] Proposal: Materials & Geometry|v5-Proposal,-Material-&-Geometry]]
     - Proposal: Interactions (Coming Soon)
     - Proposal: Text (Coming Soon)
     - Proposal: Generated Mesh (Coming Soon)
