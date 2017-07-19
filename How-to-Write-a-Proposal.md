@@ -9,8 +9,8 @@ implementing a proposed solution, some guidelines are written below.
 
 ## Title
 
-Each proposal should be titled `<version> Proposal: <title>`, where `<version>` is the major version
-that the proposal is for and `<title>` is the user-defined title. For example: `v5 Proposal: Particles`.
+Each proposal should be titled `<version> Proposal, <title>`, where `<version>` is the major version
+that the proposal is for and `<title>` is the user-defined title. For example: `v5 Proposal, Particles`.
 
 ## Template
 
