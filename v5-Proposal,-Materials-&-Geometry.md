@@ -1,5 +1,3 @@
-<!-- --- title: TEST -->
-
 ## Problem
 
 The current underlying structure of PixiJS is that each feature (Sprites, Graphics, TilingSprite, ParticleContainer, etc) implements its own "backend". This is in part due to the natural growth of PixiJS throughout the years. Unfortunately it causes two major problems today: increased maintenance burden for changes, difficult low-level integration outside of the library.
