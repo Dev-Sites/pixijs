@@ -1,5 +1,3 @@
-## Getting Started
-
 ### I. Including PixiJS
 
 Include the PixiJS library in your project by linking to the PixiJS CDN. [More info here.](https://github.com/pixijs/pixi.js/wiki/FAQs#where-can-i-get-a-build)
