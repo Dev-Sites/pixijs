@@ -21,6 +21,7 @@
 - [[Unit Tests|v4-Unit-Tests]]
 - [[Migration Guide|v4-Migration-Guide]]
 - [[Resources|v4-Resources]]
+- [[Gotchas|v4-Gotchas]]
 
 **Version 5**
 - [[How to Write a Proposal|v5-How-to-Write-a-Proposal]]
