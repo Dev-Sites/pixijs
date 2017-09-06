@@ -61,6 +61,7 @@ The following objects do not support Texture objects that are part of a Spritesh
 * `PIXI.mesh.Mesh`
 * `PIXI.mesh.Plane`
 * `PIXI.mesh.Rope`
+* `PIXI.mesh.NineSlicePlane`
 * `PIXI.extras.TilingSprite`
 
 ```js
