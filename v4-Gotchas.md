@@ -61,7 +61,7 @@ The following objects do not support Texture objects that are part of a Spritesh
 * Sprite alpha masks
 * Filter with sprite inputs (DisplacementFilter)
 
-Mesh objects added support of texture regions in 4.5.0
+Mesh objects support texture regions since 4.5.0
 
 * `PIXI.mesh.Mesh`
 * `PIXI.mesh.Plane`
