@@ -123,3 +123,5 @@ var myBlend = new PIXI.filters.VoidFilter();
 myBlend.blendMode = PIXI.BLEND_MODES.ADD;
 container.filters = [myBlend];
 ```
+
+You cannot use custom blendmodes in vanilla pixi, however there is [workaround](http://www.html5gamedevs.com/topic/31803-scratch-card-effect/?tab=comments#comment-182673), as an example, you can 'clear' the surface (from your enemies blood), but there is no guarantee that it works on mobile devices.
