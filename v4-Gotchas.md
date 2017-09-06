@@ -75,9 +75,11 @@ TilingSprite supports texture regions since 4.1.0
 ```js
 PIXI.loader.add('atlas', 'atlas.json')
   .load((loader, resources) => {
-    const mesh = new PIXI.mesh.Mesh(
-      resources.atlas.textures.myTexture // <-- won't work
+    const sprite = new PIXI.Sprite(
+      resources.atlas.textures.myTexture
     );
+    someContainer.addChild(sprite);
+    someContainer.mask = sprite; // <-- won't work
   });
 ```
 
