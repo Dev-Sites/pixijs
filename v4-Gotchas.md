@@ -83,3 +83,18 @@ PIXI.loader.add('atlas', 'atlas.json')
     );
   });
 ```
+
+## PIXI.Filter
+
+### Filters Don't Render on CanvasRenderer
+
+Filters are very expensive when implemented on a `CanvasRenderer` and PixiJS does not support the use-case here. Performance would simply be to poor. Therefore, Filters only work with WebGLRenderer and will be ignored on platforms that do not support WebGL (e.g., Internet Explorer, Android 4, etc).
+
+```js
+const stage = new PIXI.Container();
+const renderer = new PIXI.CanvasRenderer();
+stage.filters = [new PIXI.filters.BlurFilter()]; // <-- won't render
+renderer.render(stage);
+```
+
+**Tip:** While there's no workaround, you should make sure that you test your PixiJS content on non-WebGL platforms if you intend to use filters.
