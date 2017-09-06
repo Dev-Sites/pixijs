@@ -58,8 +58,8 @@ const graphic = new PIXI.Graphics()
 
 The following objects do not support Texture objects that are part of a Spritesheet shared with other Texture objects or where the Texture's frame is not the entire size of the BaseTexture. Using a Spritesheet with one of these classes will cause the transforms to render incorrectly. 
 
-* Sprite alpha masks
-* Filter with sprite inputs (DisplacementFilter)
+* Sprite-based masks
+* Filters with sprite inputs (e.g., DisplacementFilter)
 
 Mesh objects support texture regions since 4.5.0
 
@@ -87,11 +87,13 @@ PIXI.loader.add('atlas', 'atlas.json')
 
 ```js
 PIXI.loader.add('atlas', 'atlas.json')
-  .add('myTexture', 'myTexture.png')
+  .add('myMask', 'myMask.png')
   .load((loader, resources) => {
-    const mesh = new PIXI.mesh.Mesh(
-      resources.myTexture.texture
+    const mesh = new PIXI.Sprite(
+      resources.myMask.texture
     );
+    someContainer.addChild(sprite);
+    someContainer.mask = sprite;
   });
 ```
 
