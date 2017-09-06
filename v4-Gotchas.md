@@ -88,7 +88,7 @@ PIXI.loader.add('atlas', 'atlas.json')
 
 ### Filters Don't Render on CanvasRenderer
 
-Filters are very expensive when implemented on a `CanvasRenderer` and PixiJS does not support the use-case here. Performance would simply be to poor. Therefore, Filters only work with WebGLRenderer and will be ignored on platforms that do not support WebGL (e.g., Internet Explorer, Android 4, etc).
+Filters are very expensive when implemented on a `CanvasRenderer` and PixiJS does not support the use-case here. Performance would simply be too poor. Therefore, Filters only work with WebGLRenderer and will be ignored on platforms that do not support WebGL (e.g., Internet Explorer, Android 4, etc).
 
 ```js
 const stage = new PIXI.Container();
