@@ -66,7 +66,9 @@ The following objects do not support Texture objects that are part of a Spritesh
 ```js
 PIXI.loader.add('atlas', 'atlas.json')
   .load((loader, resources) => {
-    const mesh = new PIXI.mesh.Mesh(resources.atlas.textures.myTexture); // <-- won't work
+    const mesh = new PIXI.mesh.Mesh(
+      resources.atlas.textures.myTexture // <-- won't work
+    );
   });
 ```
 
@@ -76,6 +78,8 @@ PIXI.loader.add('atlas', 'atlas.json')
 PIXI.loader.add('atlas', 'atlas.json')
   .add('myTexture', 'myTexture.png')
   .load((loader, resources) => {
-    const mesh = new PIXI.mesh.Mesh(resources.myTexture.texture); // <-- standalone image
+    const mesh = new PIXI.mesh.Mesh(
+      resources.myTexture.texture // <-- standalone image
+    );
   });
 ```
