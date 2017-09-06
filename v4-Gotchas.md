@@ -114,9 +114,9 @@ renderer.render(stage);
 
 ## BlendModes
 
-WebGL supports only NORMAL, ADD, MULTIPLY and SCREEN blendmodes. Advanced blendmodes are supported by canvas renderer, but there is a workaround through (pixi-picture)[https://github.com/pixijs/pixi-picture]
+WebGL supports only NORMAL, ADD, MULTIPLY and SCREEN blendmodes. Advanced blendmodes are supported by canvas renderer, but there is a workaround through [pixi-picture](https://github.com/pixijs/pixi-picture)
 
-You cannot use blendmode on a simple container, but there's workaround through filters, that way PIXI will render everything inside container into separate framebuffer and then render whole layer with a blendmode of your choice (example)[http://pixijs.github.io/examples/#/layers/lighting.js]
+You cannot use blendmode on a simple container, but there's workaround through filters, that way PIXI will render everything inside container into separate framebuffer and then render whole layer with a blendmode of your choice [example](http://pixijs.github.io/examples/#/layers/lighting.js)
 
 ```js
 var myBlend = new PIXI.filters.VoidFilter();
