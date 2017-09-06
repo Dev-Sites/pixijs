@@ -116,7 +116,7 @@ renderer.render(stage);
 
 WebGL supports only NORMAL, ADD, MULTIPLY and SCREEN blendmodes. Advanced blendmodes are supported by canvas renderer (at least until webgl updates up to opengl es 4.0), but there is a workaround through [pixi-picture](https://github.com/pixijs/pixi-picture)
 
-You cannot use blendmode on a simple container, but there's workaround through filters, that way PIXI will render everything inside container into separate framebuffer and then render whole layer with a blendmode of your choice [example](http://pixijs.github.io/examples/#/layers/lighting.js)
+You cannot specify blend mode for a simple container, but there's workaround through filters, that way PIXI will render everything inside container into separate framebuffer and then render whole layer with a blending mode of your choice [example](http://pixijs.github.io/examples/#/layers/lighting.js)
 
 ```js
 var myBlend = new PIXI.filters.VoidFilter();
@@ -124,4 +124,4 @@ myBlend.blendMode = PIXI.BLEND_MODES.ADD;
 container.filters = [myBlend];
 ```
 
-You cannot use custom blendmodes in vanilla pixi, however there is [workaround](http://www.html5gamedevs.com/topic/31803-scratch-card-effect/?tab=comments#comment-182673), as an example, you can 'clear' the surface (from your enemies blood), but there is no guarantee that it works on mobile devices.
+You cannot use custom WebGL blend modes in vanilla pixi, however there is [workaround](http://www.html5gamedevs.com/topic/31803-scratch-card-effect/?tab=comments#comment-182673), as an example, you can 'clear' the surface (from your enemies blood), but there is no guarantee that it works on mobile devices.
