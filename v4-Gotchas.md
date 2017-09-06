@@ -114,9 +114,17 @@ renderer.render(stage);
 
 ## BlendModes
 
-WebGL supports only NORMAL, ADD, MULTIPLY and SCREEN blendmodes. Advanced blendmodes like OVERLAY are supported by canvas renderer (at least until webgl updates up to opengl es 4.0), but there is a workaround through [pixi-picture](https://github.com/pixijs/pixi-picture)
+### Limited WebGL Blend Mode Support
 
-You cannot specify blend mode for a simple container, but there's workaround through filters, that way PIXI will render everything inside container into separate framebuffer and then render whole layer with a blending mode of your choice [example](http://pixijs.github.io/examples/#/layers/lighting.js)
+WebGL supports only `NORMAL`, `ADD`, `MULTIPLY` and `SCREEN` blend modes. Advanced blend modes like `OVERLAY` are only supported by canvas renderer (at least until WebGL updates up to OpenGL ES 4.0).
+
+**Workaround:** Check out the PixiJS plugin [pixi-picture](https://github.com/pixijs/pixi-picture) to add advanced blend mode support for WebGL.
+
+### No Container Blend Mode Support
+
+You cannot specify blend mode for a normal Container. 
+
+**Workaround:** Using a VoidFilter, PixiJS will render everything inside container into separate framebuffer and then render whole layer with a blending mode of your choice. See [example](http://pixijs.github.io/examples/#/layers/lighting.js).
 
 ```js
 var myBlend = new PIXI.filters.VoidFilter();
@@ -124,4 +132,8 @@ myBlend.blendMode = PIXI.BLEND_MODES.ADD;
 container.filters = [myBlend];
 ```
 
-You cannot use custom WebGL blend modes in vanilla pixi, however there is [workaround](http://www.html5gamedevs.com/topic/31803-scratch-card-effect/?tab=comments#comment-182673), as an example, you can 'clear' the surface (from your enemies blood), but there is no guarantee that it works on mobile devices.
+### No Custom WebGL Blend Modes
+
+You cannot use custom WebGL blend modes in vanilla PixiJS.
+
+**Workaround:** [Example](http://www.html5gamedevs.com/topic/31803-scratch-card-effect/?tab=comments#comment-182673) of 'clearing' the surface, but there is no guarantee that it works on mobile devices.
