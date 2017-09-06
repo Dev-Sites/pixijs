@@ -111,3 +111,15 @@ renderer.render(stage);
 ```
 
 **Tip:** While there's no workaround, you should make sure that you test your PixiJS content on non-WebGL platforms if you intend to use filters.
+
+## BlendModes
+
+WebGL supports only NORMAL, ADD, MULTIPLY and SCREEN blendmodes. Advanced blendmodes are supported by canvas renderer, but there is a workaround through (pixi-picture)[https://github.com/pixijs/pixi-picture]
+
+You cannot use blendmode on a simple container, but there's workaround through filters, that way PIXI will render everything inside container into separate framebuffer and then render whole layer with a blendmode of your choice (example)[http://pixijs.github.io/examples/#/layers/lighting.js]
+
+```js
+var myBlend = new PIXI.filters.VoidFilter();
+myBlend.blendMode = PIXI.BLEND_MODES.ADD;
+container.filters = [myBlend];
+```
