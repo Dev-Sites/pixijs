@@ -22,6 +22,8 @@ app.stage.addChild(root);
 root.filters = [new PIXI.filters.BlurFilter()];
 ```
 
+@ivanpopelyshev: Sometimes this workaround works in other corner cases: cacheAsBitmap, ParticleContainer.
+
 ## PIXI.Graphics
 
 ### The `addHole` API doesn't work with shapes
