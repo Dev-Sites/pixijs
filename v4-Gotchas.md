@@ -54,7 +54,7 @@ const graphic = new PIXI.Graphics()
 
 ## PIXI.Texture
 
-### Things that Don't Support Spritesheet Textures
+### Things That Don't Support Spritesheet Textures
 
 The following objects do not support Texture objects that are part of a Spritesheet shared with other Texture objects or where the Texture's frame is not the entire size of the BaseTexture. Using a Spritesheet with one of these classes will cause the transforms to render incorrectly. 
 
