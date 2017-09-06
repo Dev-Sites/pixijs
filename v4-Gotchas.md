@@ -51,3 +51,31 @@ const graphic = new PIXI.Graphics()
   .lineTo(50, 60)
   .addHole();
 ```
+
+## PIXI.Texture
+
+### Advanced DisplayObjects Don't Support Spritesheet Textures
+
+The following objects do not support Texture objects that are part of a Spritesheet shared with other Texture objects or where the Texture's frame is not the entire size of the BaseTexture. Using a Spritesheet with one of these classes will cause the transforms to render incorrectly. 
+
+* `PIXI.mesh.Mesh`
+* `PIXI.mesh.Plane`
+* `PIXI.mesh.Rope`
+* `PIXI.extras.TilingSprite`
+
+```js
+PIXI.loader.add('atlas', 'atlas.json')
+  .load((loader, resources) => {
+    const mesh = new PIXI.mesh.Mesh(resources.atlas.textures.myTexture); // <-- won't work
+  });
+```
+
+**Workaround:** If you intend to use any of these advanced DisplayObjects, make sure they are loaded as standalone images and are not part of a bundled Spritesheet.
+
+```js
+PIXI.loader.add('atlas', 'atlas.json')
+  .add('myTexture', 'myTexture.png')
+  .load((loader, resources) => {
+    const mesh = new PIXI.mesh.Mesh(resources.myTexture.texture); // <-- standalone image
+  });
+```
