@@ -54,14 +54,22 @@ const graphic = new PIXI.Graphics()
 
 ## PIXI.Texture
 
-### Advanced DisplayObjects Don't Support Spritesheet Textures
+### Things that Don't Support Spritesheet Textures
 
 The following objects do not support Texture objects that are part of a Spritesheet shared with other Texture objects or where the Texture's frame is not the entire size of the BaseTexture. Using a Spritesheet with one of these classes will cause the transforms to render incorrectly. 
+
+* Sprite alpha masks
+* Filter with sprite inputs (DisplacementFilter)
+
+Mesh objects added support of texture regions in 4.5.0
 
 * `PIXI.mesh.Mesh`
 * `PIXI.mesh.Plane`
 * `PIXI.mesh.Rope`
 * `PIXI.mesh.NineSlicePlane`
+
+TilingSprite supports texture regions since 4.1.0
+
 * `PIXI.extras.TilingSprite`
 
 ```js
