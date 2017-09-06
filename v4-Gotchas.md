@@ -112,7 +112,7 @@ renderer.render(stage);
 
 **Tip:** While there's no workaround, you should make sure that you test your PixiJS content on non-WebGL platforms if you intend to use filters.
 
-## BlendModes
+## Blend Modes
 
 ### Limited WebGL Blend Mode Support
 
