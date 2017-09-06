@@ -79,7 +79,7 @@ PIXI.loader.add('atlas', 'atlas.json')
   .add('myTexture', 'myTexture.png')
   .load((loader, resources) => {
     const mesh = new PIXI.mesh.Mesh(
-      resources.myTexture.texture // <-- standalone image
+      resources.myTexture.texture
     );
   });
 ```
