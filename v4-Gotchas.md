@@ -60,17 +60,15 @@ The following objects do not support Texture objects that are part of a Spritesh
 
 * Sprite-based masks
 * Filters with sprite inputs (e.g., DisplacementFilter)
+* PIXI.mesh.Mesh  †
+* PIXI.mesh.Plane †
+* PIXI.mesh.Rope †
+* PIXI.mesh.NineSlicePlane †
+* PIXI.extras.TilingSprite ‡
 
-Mesh objects support texture regions since 4.5.0
+> † Supports texture regions since 4.5.0
 
-* `PIXI.mesh.Mesh`
-* `PIXI.mesh.Plane`
-* `PIXI.mesh.Rope`
-* `PIXI.mesh.NineSlicePlane`
-
-TilingSprite supports texture regions since 4.1.0
-
-* `PIXI.extras.TilingSprite`
+> ‡ Supports texture regions since 4.1.0
 
 ```js
 PIXI.loader.add('atlas', 'atlas.json')
