@@ -16,7 +16,7 @@ Here are some plugins from the community for use with pixi v3 & v4:
 - [pixi-audio](https://github.com/Nazariglez/pixi-audio) - Add audio support using the pixi.js resource-loader.
 - [pixi-keyboard](https://github.com/Nazariglez/pixi-keyboard) - Add keyboard support to manage the keyboard events easily
 - [pixi-timer](https://github.com/Nazariglez/pixi-timer) - Create time events easily.
-- [pixi-game](https://github.com/Shafley/pixi-game) - Add class `Game` and `State` like Phaser.js.
+- [pixi-game](https://github.com/Shafley/pixi-game) - Add class `Game` and `State`. The `State` lifecycle contains `init`, `preload`, `create`, `update`.
 
 [action & animation]: https://github.com/hustcc/pixi-action
 [cotxt]: https://github.com/JiDW/pixi-cocoontext
