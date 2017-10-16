@@ -2,7 +2,7 @@
 
 Sometimes just making a plugin is not enough to add new things in PIXI. Here's list of forks that add special features that are too heavy to be made into separate js, because they change a lot in pixi core itself.
 
-It takes more time to keep forks up-to-date, but if you need particular feature and trust the author, that can be optimal pick.
+It takes more time to keep forks up-to-date, but if you need particular feature and trust the author, that can be optimal pick. Also, that's good source for possible features for your own fork.
 
 ### 4.0.0-alpha 3d fork
 
