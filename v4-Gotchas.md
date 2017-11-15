@@ -137,3 +137,43 @@ container.filters = [myBlend];
 You cannot use custom WebGL blend modes in vanilla PixiJS.
 
 **Workaround:** [Example](http://www.html5gamedevs.com/topic/31803-scratch-card-effect/?tab=comments#comment-182673) of 'clearing' the surface, but there is no guarantee that it works on mobile devices.
+
+## Texture preparation
+
+Sometimes there's a lag when your app shows a sprite of particular base texture first time.
+
+Manually, you can upload a texture to webgl memory using this:
+
+```js
+renderer.textureManager.updateTexture(myTexture);
+```
+
+You may pass any texture of particular atlas to upload whole atlas.
+
+### Garbage Collector
+
+When you change the stage, most of the time you dont remember which resources you need for next stage and which ones can be destroyed. There's also huge problem with generated resources.
+
+GC solves that easily, it removes all textures that weren't used in last two minutes from videomemory. But it can be a headache if you want to show particular animation every three minutes - first frame will have lag. In that case, if you are ready to take responsibility, you can switch it off
+
+```js
+renderer.textureGC.GC_MODE = PIXI.GC_MODES.MANUAL;
+```
+
+Or just switch it off globally for all renderers to be created later
+
+```js
+PIXI.settings.GC_MODE = PIXI.GC_MODES.MANUAL;
+```
+
+### prepare
+
+Use [prepare](http://pixijs.download/dev/docs/PIXI.prepare.html) API to make sure that all textures of particular stage are uploaded to videomemory. Beware, the method is asynchronous!
+
+### createImageBitmap
+
+Videomemory upload is not the only operation that causes lag. Browser's PNG->RGBA conversion also does it, its synchronous pain. After some time, browser removes RGBA buffer from regular memory, that helps in low-memory devices. We have no control over it, except new function [createImageBitmap](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap) that solves this issue.
+
+createImageBitmap method will be used in pixi-v5. 
+
+Fortunately, for v4, there is the [snippet](https://gist.github.com/anonymous/d01963a44c523dc04b21bfd7037081b6) from [forum thread](http://www.html5gamedevs.com/topic/31359-upload-images-to-gpu-in-a-web-worker/) that enables createImageBitmap in case you load resources with `fromImage`.
