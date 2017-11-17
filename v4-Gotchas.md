@@ -120,7 +120,7 @@ WebGL supports only `NORMAL`, `ADD`, `MULTIPLY` and `SCREEN` blend modes. Advanc
 
 **Workaround:** Check out the PixiJS plugin [pixi-picture](https://github.com/pixijs/pixi-picture) to add advanced blend mode support for WebGL.
 
-### Extra canvas composition mode
+### Custom canvas composition mode
 
 Numbers from 20 are free, you can use composition modes that absent in [CanvasRenderer](https://github.com/pixijs/pixi.js/blob/dev/src/core/renderers/canvas/utils/mapCanvasBlendModesToPixi.js)
 
