@@ -23,13 +23,13 @@ vec2 pixelCoord = vTextureCoord * filterArea.xy;
 They are in pixels. That won't work if we want something like "fill the ellipse into a bounding box". So, lets pass dimensions too! PIXI doesnt do it automatically, we need a manual fix:
 
 ```js
-filter.apply = function(filterManager, input, output)
+filter.apply = function(filterManager, input, output, clear)
 {
   this.uniforms.dimensions[0] = input.sourceFrame.width
   this.uniforms.dimensions[1] = input.sourceFrame.height
 
   // draw the filter...
-  filterManager.applyFilter(this, input, output);
+  filterManager.applyFilter(this, input, output, clear);
 }
 ```
 
