@@ -4,6 +4,12 @@ There are a handful of use-cases in PixiJS which you might, some-day encounter. 
 
 ## PIXI.Container
 
+### There's no anchor in many pixi objects.
+
+Anchor has a meaning only for Sprite-based objects.
+
+But there are [hacks](https://github.com/pixijs/pixi.js/issues/3272#issuecomment-349359529) that can help you if you sure.
+
 ### Filters on root PIXI.Container don't render
 
 For example, in the snippet below, the blur does not render:
