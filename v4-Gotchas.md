@@ -4,11 +4,9 @@ There are a handful of use-cases in PixiJS which you might, some-day encounter. 
 
 ## PIXI.Container
 
-### There's no anchor in many pixi objects.
+### There's no `anchor` on non-Sprite objects.
 
-Anchor has a meaning only for Sprite-based objects.
-
-But there are [hacks](https://github.com/pixijs/pixi.js/issues/3272#issuecomment-349359529) that can help you if you sure.
+Anchor has a meaning only for Sprite-based objects. There are [hacks](https://github.com/pixijs/pixi.js/issues/3272#issuecomment-349359529) that can help achieve an anchor for other DisplayObjects.
 
 ### Filters on root PIXI.Container don't render
 
