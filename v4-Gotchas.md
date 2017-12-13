@@ -101,6 +101,10 @@ PIXI.loader.add('atlas', 'atlas.json')
   });
 ```
 
+## PIXI.VideoBaseTexture
+
+Formats for video, and whether the video can be transparent, depend on browser. Sometimes there are bugs. See the [thread](http://www.html5gamedevs.com/topic/34518-basic-demo-video-for-hls-source/).
+
 ## PIXI.Filter
 
 ### Filters Don't Render on CanvasRenderer
