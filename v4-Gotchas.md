@@ -10,7 +10,7 @@ Anchor has a meaning only for Sprite-based objects. There are [hacks](https://gi
 
 ### Change parent of object without changing coords.
 
-DisplayObject absolute transform is the result of multiplication of all local transforms of its parents. If we change object parent, it will change absolute position. This code prevents that:
+DisplayObject absolute transform is the result of multiplication of all local transforms of its parents. If we change object parent, it will change absolute position. This code prevents saves the position:
 
 ```js
 newParent.toLocal(new PIXI.Point(0,0), bunny, bunny.position);
