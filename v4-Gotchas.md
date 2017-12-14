@@ -8,6 +8,15 @@ There are a handful of use-cases in PixiJS which you might, some-day encounter. 
 
 Anchor has a meaning only for Sprite-based objects. There are [hacks](https://github.com/pixijs/pixi.js/issues/3272#issuecomment-349359529) that can help achieve an anchor for other DisplayObjects.
 
+### Change parent of object without changing coords.
+
+DisplayObject absolute transform is the result of multiplication of all local transforms of its parents. If we change object parent, it will change absolute position. This code prevents that:
+
+```js
+newParent.toLocal(new PIXI.Point(0,0), bunny, bunny.position);
+newParent.addChild(bunny);
+```
+
 ### Filters on root PIXI.Container don't render
 
 For example, in the snippet below, the blur does not render:
