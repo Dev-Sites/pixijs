@@ -203,3 +203,25 @@ Videomemory upload is not the only operation that causes lag. Browser's PNG->RGB
 createImageBitmap method will be used in pixi-v5. 
 
 Fortunately, for v4, there is the [snippet](https://gist.github.com/anonymous/d01963a44c523dc04b21bfd7037081b6) from [forum thread](http://www.html5gamedevs.com/topic/31359-upload-images-to-gpu-in-a-web-worker/) that enables createImageBitmap in case you load resources with `fromImage`.
+
+## Interaction
+
+[InteractionManager](https://github.com/pixijs/pixi.js/blob/dev/src/interaction/InteractionManager.js) instance is created for every renderer instance automagically. See `renderer.plugins.interaction`
+
+### CSS transforms on canvas
+
+If you do any transformations on canvas, there's no guarantee that InteractionManager calculates correct coordinates, see https://jsfiddle.net/r3fktwkk/ - pixi thinks that sprite is in top-left corner.
+
+Please override [mapPositionToPoint](https://github.com/pixijs/pixi.js/blob/dev/src/interaction/InteractionManager.js#L954)
+
+Do it either in a class
+
+```js
+PIXI.interaction.InteractionManager.prototype.mapPositionToPoint= function(point, x, y) { ... }
+```
+
+either in a particular instance
+
+```js
+renderer.plugins.interaction.mapPositionToPoint= function(point, x, y) { ... }
+```
