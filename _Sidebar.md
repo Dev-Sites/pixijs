@@ -22,6 +22,7 @@
 - [[Migration Guide|v4-Migration-Guide]]
 - [[Resources|v4-Resources]]
 - [[Gotchas|v4-Gotchas]]
+- [[Boilerplates|Boilerplate]]
 
 **Version 5**
 - [[How to Write a Proposal|v5-How-to-Write-a-Proposal]]
