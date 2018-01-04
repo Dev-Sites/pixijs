@@ -153,4 +153,4 @@ If you want to use extra textures for a filter, please look here:
 
 Full example: https://github.com/pixijs/pixi-plugin-example
 
-Shortcut: http://www.html5gamedevs.com/topic/31704-createshaderplugin-helper-function/
+Shortcut: https://github.com/TazOen/createShaderPlugin , http://www.html5gamedevs.com/topic/31704-createshaderplugin-helper-function/
