@@ -226,7 +226,7 @@ either in a particular instance
 renderer.plugins.interaction.mapPositionToPoint= function(point, x, y) { ... }
 ```
 
-# Renderer plugin instead of filter
+## Renderer plugin instead of filter
 
 For some cases its easier to perform operations that are easily handled through renderer plugin.
 
