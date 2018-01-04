@@ -144,3 +144,13 @@ You only can use textures that are not trimmed or cropped, as that would throw o
 texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
 ```
 If you want to use an atlas texture as a secondary input for a filter, please wait for pixi-v5 or do it yourself. Add clamping uniforms, use them in the shader and make a better mapping in `filterMatrix`.
+
+# Renderer plugin
+
+For some cases its easier to perform operations that are easily handled through renderer plugin.
+
+If you want to use extra textures for a filter, please look here:
+
+Full example: https://github.com/pixijs/pixi-plugin-example
+
+Shortcut: http://www.html5gamedevs.com/topic/31704-createshaderplugin-helper-function/
