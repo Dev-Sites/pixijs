@@ -236,3 +236,14 @@ If you want to use extra textures for a filter, please look here:
 Full example: https://github.com/pixijs/pixi-plugin-example
 
 Shortcut: https://github.com/TazOen/createShaderPlugin , http://www.html5gamedevs.com/topic/31704-createshaderplugin-helper-function/
+
+## Extract
+
+[PIXI.extract](http://pixijs.download/dev/docs/PIXI.extract.html) have no params to make a certain area of the stage. But its possible to use `generateTexture` directly:
+
+```js
+var myArea = renderer.screen; // rectangle that you want to make a screenshot
+var tempTexture = renderer.generateTexture(stage, undefined, undefined, myArea);
+var pixels = renderer.extract.pixels(tempTexture);
+tempTexture.destroy(true);
+```
