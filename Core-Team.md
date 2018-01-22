@@ -1,6 +1,6 @@
 ## Active Members
 
-The Core Team is comprised of a handful of dedicated individuals who volunteer their time to make Pixi.js better. None of the Core Team is paid directly to develop Pixi.js, but for many members it is closely related with their professional day-jobs.
+The Core Team is comprised of a handful of dedicated individuals who volunteer their time to make PixiJS better. None of the Core Team is paid directly to develop PixiJS, but for many members it is closely related with their professional day-jobs.
 
 | Name                  | Role              | Country   | Github                                                | Twitter                                                   |
 |:---------------------:|:-----------------:|:---------:|:-----------------------------------------------------:|:---------------------------------------------------------:|
@@ -11,6 +11,7 @@ The Core Team is comprised of a handful of dedicated individuals who volunteer t
 |**Dave Moore**         | Member            | :gb:      | [@themoonrat](https://github.com/themoonrat)          | [@themoonrat](https://twitter.com/themoonrat)             |
 |**Stafford Williams**  | Member            | 🇦🇺        | [@staff0rd](https://github.com/staff0rd)              | [@staff0rd](https://twitter.com/staff0rd)                 |
 |**Andrew Start**       | Member            | :us:      | [@andrewstart](https://github.com/andrewstart)        |                                                           |
+|**Yevhenii Huselietov**  | Member            | 🇺🇦        | [@cursedcoder](https://github.com/cursedcoder)              | [@cursedcoder](https://twitter.com/cursedcoder)                 |
 
 ## Roles
 
