@@ -8,6 +8,10 @@ There are a handful of use-cases in PixiJS which you might, some-day encounter. 
 
 Anchor has a meaning only for Sprite-based objects. There are [hacks](https://github.com/pixijs/pixi.js/issues/3272#issuecomment-349359529) that can help achieve an anchor for other DisplayObjects.
 
+### Width and height are evil
+
+Container `width` and `height` properties based on `getLocalBounds()` function that calculates bounds of all children and messes with transforms. It is ok to make your own container or override pixi behaviour to make it project-dependant. Custom container example with [dock](https://jsfiddle.net/pq2y39rf/2/)
+
 ### Change parent of object without changing coords.
 
 DisplayObject absolute transform is the result of multiplication of all local transforms of its parents. If we change object parent, it will change absolute position. This code prevents saves the position:
