@@ -10,7 +10,7 @@ Anchor has a meaning only for Sprite-based objects. There are [hacks](https://gi
 
 ### Width and height are evil
 
-Container `width` and `height` properties based on `getLocalBounds()` function that calculates bounds of all children and messes with transforms. It is ok to make your own container or override pixi behaviour to make it project-dependant. Custom container example with [dock](https://jsfiddle.net/pq2y39rf/2/)
+Container `width` and `height` properties based on `getLocalBounds()` function that calculates bounds of all children and messes with transforms. It is ok to make your own container or override pixi behaviour to make it project-dependant. Custom container [example with dock](https://jsfiddle.net/pq2y39rf/2/) based on [forum post](http://www.html5gamedevs.com/topic/34913-virtual-container/?do=findComment&comment=204181)
 
 ### Change parent of object without changing coords.
 
