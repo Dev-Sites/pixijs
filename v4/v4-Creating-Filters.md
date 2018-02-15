@@ -154,3 +154,17 @@ If you want to use extra textures for a filter, please look here:
 Full example: https://github.com/pixijs/pixi-plugin-example
 
 Shortcut: https://github.com/TazOen/createShaderPlugin , http://www.html5gamedevs.com/topic/31704-createshaderplugin-helper-function/
+
+### Cannot read property 'location' of undefined
+
+That appears when some of properties that are required by FilterManager are not used in the shader. Even if you have them in your code, glsl compiler may remove unused attributes, its platform-dependant.
+
+Please dont do that.
+
+```
+const filterCode = `void main(){
+   gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+}`;
+const filter = new PIXI.Filter(null, filterCode);
+someSprite.filters = [filter];
+```
