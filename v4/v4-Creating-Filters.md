@@ -155,7 +155,7 @@ Full example: https://github.com/pixijs/pixi-plugin-example
 
 Shortcut: https://github.com/TazOen/createShaderPlugin , http://www.html5gamedevs.com/topic/31704-createshaderplugin-helper-function/
 
-### Cannot read property 'location' of undefined
+## Cannot read property 'location' of undefined
 
 That appears when some of properties that are required by FilterManager are not used in the shader. Even if you have them in your code, glsl compiler may remove unused attributes, its platform-dependant.
 
