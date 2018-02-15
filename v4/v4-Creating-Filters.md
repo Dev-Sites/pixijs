@@ -161,7 +161,7 @@ That appears when some of properties that are required by FilterManager are not 
 
 Please dont do that. If you really dont need textureCoord - consider switch to renderer plugin.
 
-```
+```js
 const filterCode = `void main(){
    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
 }`;
