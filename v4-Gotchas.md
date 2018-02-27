@@ -282,25 +282,25 @@ If canvas is blinking, try different params for renderer:
 Those are defaults:
 
 ```js
-new WebGLRenderer(800, 600, {antialias: false, transparent: true});
+new PIXI.WebGLRenderer(800, 600, {antialias: false, transparent: true});
 ```
 
 Sometimes `antialias` helps to stabilize framebuffer behaviour:
 
 ```js
-new WebGLRenderer(800, 600, {antialias: true});
+new PIXI.WebGLRenderer(800, 600, {antialias: true});
 ```
 
 For Amazon Kiddle its necessary to turn on `preserveDrawingBuffer`. Yes, this parameters slows everything down, but we have no choice:
 
 ```js
-new WebGLRenderer(800, 600, {preserveDrawingBuffer: true});
+new PIXI.WebGLRenderer(800, 600, {preserveDrawingBuffer: true});
 ```
 
 Some versions of chrome dont like transparent canvases, so try to turn it off:
 
 ```js
-new WebGLRenderer(800, 600, {transparent: false});
+new PIXI.WebGLRenderer(800, 600, {transparent: false});
 // or this one
-new WebGLRenderer(800, 600, {transparent: 'notMultiplied'});
+new PIXI.WebGLRenderer(800, 600, {transparent: 'notMultiplied'});
 ```
