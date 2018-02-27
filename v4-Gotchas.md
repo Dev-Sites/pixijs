@@ -263,6 +263,12 @@ Those lines are required for mobile devices, and WebGL can crash if you dont add
 <meta name="apple-mobile-web-app-capable" content="yes">
 ```
 
+or this one by @Exca, for android devices with big screens:
+
+```html
+<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, maximum-scale=1.0, user-scalable=no">
+```
+
 ### Fiddling
 
 If canvas is blinking, try different params for renderer:
