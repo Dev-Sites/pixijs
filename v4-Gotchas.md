@@ -251,3 +251,48 @@ var tempTexture = renderer.generateTexture(stage, undefined, undefined, myArea);
 var pixels = renderer.extract.pixels(tempTexture);
 tempTexture.destroy(true);
 ```
+
+## Mobile devices crashes and problems
+
+### HTML No-scale
+
+Those lines are required for mobile devices, and WebGL can crash if you dont add them:
+
+```html
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimum-scale=1, width=device-width, height=device-height">
+<meta name="apple-mobile-web-app-capable" content="yes">
+```
+
+### Fiddling
+
+If canvas is blinking, try different params for renderer:
+
+1. antialias
+2. preserveDrawingBuffer
+3. transparent
+
+Those are defaults:
+
+```js
+new WebGLRenderer(800, 600, {antialias: false, transparent: true});
+```
+
+Sometimes `antialias` helps to stabilize framebuffer behaviour:
+
+```js
+new WebGLRenderer(800, 600, {antialias: true});
+```
+
+For Amazon Kiddle its necessary to turn on `preserveDrawingBuffer`. Yes, this parameters slows everything down, but we have no choice:
+
+```js
+new WebGLRenderer(800, 600, {preserveDrawingBuffer: true});
+```
+
+Some versions of chrome dont like transparent canvases, so try to turn it off:
+
+```js
+new WebGLRenderer(800, 600, {transparent: false});
+// or this one
+new WebGLRenderer(800, 600, {transparent: 'notMultiplied'});
+```
