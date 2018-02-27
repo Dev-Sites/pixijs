@@ -1,3 +1,5 @@
+
+***
 ## Overview 
 
 There are a handful of use-cases in PixiJS which you might, some-day encounter. In most cases, these were created because they fall outside of the majority of use-cases, because a lack of developer time, or because of some other necessity related to performance.
@@ -263,7 +265,7 @@ Those lines are required for mobile devices, and WebGL can crash if you dont add
 <meta name="apple-mobile-web-app-capable" content="yes">
 ```
 
-or this one by @Exca, for android devices with big screens:
+This one by @Exca, for android devices with big screens:
 
 ```html
 <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, maximum-scale=1.0, user-scalable=no">
