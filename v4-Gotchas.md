@@ -256,7 +256,7 @@ tempTexture.destroy(true);
 
 ### HTML No-scale
 
-Those lines are required for mobile devices, and WebGL can crash if you dont add them:
+Those lines are required for mobile devices, and WebGL can crash if you dont add them in 'head' tag of HTML page
 
 ```html
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimum-scale=1, width=device-width, height=device-height">
