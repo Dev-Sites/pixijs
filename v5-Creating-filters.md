@@ -1,4 +1,4 @@
-V4 filters differ from V3. You can't just add in the shader and assume that texture coordinates are in the [0,1] range.
+V5 filters are awesome.
 
 # Filter Area
 
