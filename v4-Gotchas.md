@@ -79,13 +79,15 @@ const graphic = new PIXI.Graphics()
 
 The following objects do not support Texture objects that are part of a Spritesheet shared with other Texture objects or where the Texture's frame is not the entire size of the BaseTexture. Using a Spritesheet with one of these classes will cause the transforms to render incorrectly. 
 
-* Sprite-based masks
+* Sprite-based masks Ж
 * Filters with sprite inputs (e.g., DisplacementFilter)
 * PIXI.mesh.Mesh  †
 * PIXI.mesh.Plane †
 * PIXI.mesh.Rope †
 * PIXI.mesh.NineSlicePlane †
 * PIXI.extras.TilingSprite ‡
+
+> Ж Supports texture regions since 4.6.0
 
 > † Supports texture regions since 4.5.0
 
