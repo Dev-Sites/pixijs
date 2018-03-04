@@ -24,3 +24,13 @@ References: [`Texture.fromCanvas`][Texture.fromCanvas], [`Graphics`][Graphics], 
 [Texture.destroy]: http://pixijs.github.io/docs/PIXI.Texture.html#destroy
 [BaseTexture.destroy]: http://pixijs.github.io/docs/PIXI.BaseTexture.html#destroy
 [Texture.fromCanvas]: http://pixijs.github.io/docs/PIXI.Texture.html#.fromCanvas
+
+### Resizing Renderer
+
+It's very common use-case in PixiJS to want to create a canvas that resizes to the full width and height of either the `window` or the `parentNode`. PixiJS, however, does not handle window resize events internally, so the user must handle these and tell the renderer to resize. Here are two examples of how to implement resizing of the canvas. _Note: these examples require some CSS to property handle resize._
+
+**Resize to Parent Node**
+https://jsfiddle.net/bigtimebuddy/wLg7jezb/
+
+**Resize to Fullscreen**
+https://jsfiddle.net/bigtimebuddy/oaLwp0p9/
