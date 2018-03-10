@@ -18,7 +18,7 @@
 ## Graphics
 - Graphics fastest when they are not modified constantly (not including the transform, alpha or tint!)
 - Separate Graphic instances are not batched
-- Using 300 or more graphics objects can be slow, in this instance use sprites, uf you can create a texture to share between them).
+- Using 300 or more graphics objects can be slow, in this instance use sprites, if you can create a texture to share between them.
 
 ## Textures
 - Textures are automatically managed by a Texture Garbage Collector
