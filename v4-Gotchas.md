@@ -293,7 +293,7 @@ Sometimes `antialias` helps to stabilize framebuffer behaviour:
 new PIXI.WebGLRenderer(800, 600, {antialias: true});
 ```
 
-For Amazon Kiddle its necessary to turn on `preserveDrawingBuffer`. Yes, this parameters slows everything down, but we have no choice:
+For Amazon Kindle its necessary to turn on `preserveDrawingBuffer`. Yes, this parameters slows everything down, but we have no choice:
 
 ```js
 new PIXI.WebGLRenderer(800, 600, {preserveDrawingBuffer: true});
