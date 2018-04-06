@@ -73,6 +73,10 @@ const graphic = new PIXI.Graphics()
   .addHole();
 ```
 
+### Stroke Style
+
+Graphics supports only line width and color. To use dashes, you have to learn the [Workaround](https://codepen.io/unrealnl/pen/aYaxBW)
+
 ## PIXI.Texture
 
 ### Things That Don't Support Spritesheet Textures
