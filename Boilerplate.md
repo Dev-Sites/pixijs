@@ -7,3 +7,5 @@ https://github.com/yahiko00/PixiProject
 https://github.com/Leftium/pixi-starter
 
 https://github.com/dacaher/pixijs-ts-boilerplate
+
+PixiJS + Tiled + typescript: https://github.com/dearcj/Neu
