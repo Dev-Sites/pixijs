@@ -63,7 +63,7 @@ stage.addChild(sprite);
 
 ### Custom GameLoop
 
-Some apps require even more control. Lets call requestAnimationFrame directly:
+Some apps require even more control. Lets call requestAnimationFrame directly.
 
 ```js
 // setup renderer and ticker
