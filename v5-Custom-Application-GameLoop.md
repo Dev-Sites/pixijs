@@ -61,7 +61,7 @@ sprite.on('pointerdown', function() {
 stage.addChild(sprite);
 ```
 
-### Custom Gameloop
+### Custom GameLoop
 
 Some apps require even more control. Lets call requestAnimationFrame directly:
 
