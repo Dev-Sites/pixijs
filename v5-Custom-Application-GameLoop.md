@@ -24,6 +24,10 @@ sprite.on('pointerdown', function() {
 });
 
 app.stage.addChild(sprite);
+
+app.ticker.add(function(delta) {
+    sprite.rotation += 0.1 * delta;
+});
 ```
 
 ### Custom application
@@ -59,6 +63,10 @@ sprite.on('pointerdown', function() {
 });
 
 stage.addChild(sprite);
+
+ticker.add(function(delta) {
+    sprite.rotation += 0.1 * delta;
+});
 ```
 
 ### Custom GameLoop
@@ -85,10 +93,11 @@ function animate() {
     if (deltaTime > 1000) deltaTime = 1000;
     var deltaFrame = deltaTime * 60 / 1000; //1.0 is for single frame
 
-	// throttled interaction updates
+    // throttled interaction updates
     interaction.update(deltaFrame);
 	
-	// update your game there
+    // update your game there
+    sprite.rotation += 0.1 * delta;
 	
     renderer.render(stage);
 
