@@ -48,7 +48,10 @@ ticker.add(() => {
 ticker.start();
 
 // setup interaction
-var interaction = new PIXI.interaction.InteractionManager({ root: stage, ticker: ticker, view: renderer.view });
+var interaction = new PIXI.interaction.InteractionManager({ 
+    root: stage, 
+    ticker: ticker, 
+    view: renderer.view });
 
 // setup sprites
 var sprite = PIXI.Sprite.fromImage('required/assets/basics/bunny.png');
