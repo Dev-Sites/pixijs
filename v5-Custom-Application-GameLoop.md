@@ -79,10 +79,10 @@ var oldTime = Date.now();
 requestAnimationFrame(animate);
 function animate() {
     var newTime = Date.now();
-	var deltaTime = newTime - oldTime;
+    var deltaTime = newTime - oldTime;
     oldTime = newTime;	
-	if (deltaTime < 0) deltaTime = 0;
-	if (deltaTime > 1000) deltaTime = 1000;
+    if (deltaTime < 0) deltaTime = 0;
+    if (deltaTime > 1000) deltaTime = 1000;
     var deltaFrame = deltaTime * 60 / 1000; //1.0 is for single frame
 
 	// throttled interaction updates
