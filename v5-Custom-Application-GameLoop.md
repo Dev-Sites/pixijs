@@ -97,7 +97,7 @@ function animate() {
     interaction.update(deltaFrame);
 	
     // update your game there
-    sprite.rotation += 0.1 * delta;
+    sprite.rotation += 0.1 * deltaFrame;
 	
     renderer.render(stage);
 
