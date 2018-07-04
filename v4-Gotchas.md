@@ -310,3 +310,6 @@ new PIXI.WebGLRenderer(800, 600, {transparent: false});
 // or this one
 new PIXI.WebGLRenderer(800, 600, {transparent: 'notMultiplied'});
 ```
+
+## Accessibility
+The accessibility plugin is primarily used to allow you to use the keyboard to interact with on screen elements. However, by it's nature of putting a html div element correctly over the top of a pixi element, it can also be useful for debugging information. https://github.com/pixijs/pixi.js/issues/4526 is a PR that details one such usage with clever usage of the accessibleTitle property on display objects, and the attr property on html elements
