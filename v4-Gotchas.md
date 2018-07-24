@@ -79,7 +79,7 @@ Graphics supports only line width and color. To use dashes, you have to learn th
 
 ### Graphics + TilingSprite
 
-In v4 its not possible to fill an area with a texture, and TilingSprite+mask is not performant enough. You can use data from graphics to create a mesh, however your texture has to be POW2 (and no atlas!): http://www.html5gamedevs.com/topic/39049-drawing-huge-objects/?do=findComment&comment=222998
+In v4 its not possible to fill an area with a texture, and TilingSprite+mask is not performant enough. Provided [workaround](http://www.html5gamedevs.com/topic/39049-drawing-huge-objects/?do=findComment&comment=222998) works if your texture is POW2 and does not belong to an atlas.
 
 ## PIXI.Texture
 
