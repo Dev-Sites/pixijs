@@ -77,6 +77,10 @@ const graphic = new PIXI.Graphics()
 
 Graphics supports only line width and color. To use dashes, you have to learn the [Workaround](https://codepen.io/unrealnl/pen/aYaxBW)
 
+### Graphics + TilingSprite
+
+In v4 its not possible to fill an area with a texture, and TilingSprite+mask is not performant enough. You can use data from graphics to create a mesh, however your texture has to be POW2 (and no atlas!): http://www.html5gamedevs.com/topic/39049-drawing-huge-objects/?do=findComment&comment=222998
+
 ## PIXI.Texture
 
 ### Things That Don't Support Spritesheet Textures
