@@ -11,3 +11,5 @@ https://github.com/dacaher/pixijs-ts-boilerplate
 PixiJS + Tiled + typescript: https://github.com/dearcj/Neu
 
 PixiJS + Rollup https://github.com/bigtimebuddy/test-pixijs-rollup
+
+PixiJS + Parcel https://github.com/llorenspujol/parcel-pixijs-quickstarter
