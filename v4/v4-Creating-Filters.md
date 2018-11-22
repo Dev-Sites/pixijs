@@ -21,7 +21,7 @@ But when you change the value of `magic` after creation, the structure is easier
 filter.uniforms.magic = newValue;
 ```
 
-In the most cases you could ignore the 3rd  argument `uniforms `.
+In the most cases you could ignore the 3rd  argument `uniforms`
 
 # Filter Area
 
