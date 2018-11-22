@@ -1,5 +1,28 @@
 V4 filters differ from V3. You can't just add in the shader and assume that texture coordinates are in the [0,1] range.
 
+# Uniforms structure
+
+The  struct of the argument `uniforms` in the  constructor  is different from the property `uniforms`, it has the same structure as `filter.uniformsData`.
+
+When you create a filter instance , you should use:  
+```
+const uniformsData = {
+    magic: {
+        type: 'float',
+        value: magic
+    }
+};
+var filter = new PIXI.Filter('', fragSource, uniformsData );
+```
+
+But , when you want to change the value of `magic`, you just use : 
+```
+filter.uniforms.magic = newValue;
+```
+.
+
+In the most cases you could ignore the 3rd  argument `uniforms `.
+
 # Filter Area
 
 Thanks to @bQvle and @radixzz
@@ -168,3 +191,4 @@ const filterCode = `void main(){
 const filter = new PIXI.Filter(null, filterCode);
 someSprite.filters = [filter];
 ```
+
