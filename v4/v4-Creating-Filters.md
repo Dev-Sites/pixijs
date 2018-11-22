@@ -15,11 +15,11 @@ const uniformsData = {
 var filter = new PIXI.Filter('', fragSource, uniformsData );
 ```
 
-But , when you want to change the value of `magic`, you just use : 
+Change the value of `magic` after filter creation: 
+
 ```
 filter.uniforms.magic = newValue;
 ```
-.
 
 In the most cases you could ignore the 3rd  argument `uniforms `.
 
