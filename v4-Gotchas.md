@@ -179,6 +179,7 @@ container.filters = [myBlend];
 You cannot use custom WebGL blend modes in vanilla PixiJS.
 
 **Workaround:** [Example](http://www.html5gamedevs.com/topic/31803-scratch-card-effect/?tab=comments#comment-182673) of 'clearing' the surface, but there is no guarantee that it works on mobile devices.
+[Example #2](https://github.com/pixijs/pixi.js/issues/5255) adds SUBTRACT blend mode! 
 
 ## Texture preparation
 
