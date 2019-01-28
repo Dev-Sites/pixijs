@@ -151,7 +151,7 @@ No extra transparent space, and if you put it into http://pixijs.github.io/examp
 
 # Extra texture, mapped matrix
 
-When you want to use an extra texture to put in the filter, you need to position it as a sprite somewhere. We are working with a sprite that is not renderable but exists in the stage. Its transformation matrix will be used to position your texture in the filter. Please use https://github.com/pixijs/pixi.js/blob/dev/src/filters/displacement/DisplacementFilter.js and http://pixijs.github.io/examples/#/filters/displacement-map.js as an example.
+When you want to use an extra texture to put in the filter, you need to position it as a sprite somewhere. We are working with a sprite that is not renderable but exists in the stage. Its transformation matrix will be used to position your texture in the filter. Please use https://github.com/pixijs/pixi.js/blob/v4.x/src/filters/displacement/DisplacementFilter.js and http://pixijs.github.io/examples/#/filters/displacement-map.js as an example.
 
 Look for a mapped matrix: 
 
