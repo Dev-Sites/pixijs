@@ -47,12 +47,6 @@ ticker.add(() => {
 }, PIXI.UPDATE_PRIORITY.LOW);
 ticker.start();
 
-// setup interaction
-var interaction = new PIXI.interaction.InteractionManager({ 
-    root: stage, 
-    ticker: ticker, 
-    view: renderer.view });
-
 // setup sprites
 var sprite = PIXI.Sprite.fromImage('required/assets/basics/bunny.png');
 sprite.anchor.set(0.5);
@@ -81,8 +75,6 @@ Some apps require even more control. Lets call requestAnimationFrame directly.
 var renderer = new PIXI.Renderer(800, 600, { backgroundColor: 0x1099bb });
 document.body.appendChild(renderer.view);
 var stage = new PIXI.Container();
-// setup interaction
-var interaction = new PIXI.interaction.InteractionManager({ root: stage, view: renderer.view });
 
 // setup RAF
 var oldTime = Date.now();
@@ -95,9 +87,6 @@ function animate() {
     if (deltaTime < 0) deltaTime = 0;
     if (deltaTime > 1000) deltaTime = 1000;
     var deltaFrame = deltaTime * 60 / 1000; //1.0 is for single frame
-
-    // throttled interaction updates
-    interaction.update(deltaFrame);
 	
     // update your game there
     sprite.rotation += 0.1 * deltaFrame;
