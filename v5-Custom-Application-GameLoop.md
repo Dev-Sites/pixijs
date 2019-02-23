@@ -32,7 +32,7 @@ app.ticker.add(function(delta) {
 
 ### Custom application
 
-To have more control, you can manually setup all the plugins you need. In this case we setup `ticker` and `interaction` plugins.
+To have more control, you can manually setup all the plugins you need. In this case we setup `ticker` plugin.
 
 ```js
 // setup renderer and ticker
