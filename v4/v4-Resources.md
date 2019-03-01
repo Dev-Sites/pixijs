@@ -4,8 +4,9 @@ All things pixi such as overview, tutorials, projects and examples can be found 
 
 ## Guides and Tutorials
 
-[Learning PixiJS](https://github.com/kittykatattack/learningPixi)
-[Setting up PixiJS BitmapText](https://www.adammarcwilliams.co.uk/creating-bitmap-text-pixi/)
+- [Learning PixiJS](https://github.com/kittykatattack/learningPixi)
+
+- [Setting up PixiJS BitmapText](https://www.adammarcwilliams.co.uk/creating-bitmap-text-pixi/)
 
 ### Interactivity
 
