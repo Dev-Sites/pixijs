@@ -318,3 +318,11 @@ new PIXI.WebGLRenderer(800, 600, {transparent: 'notMultiplied'});
 
 ## Accessibility
 The accessibility plugin is primarily used to allow you to use the keyboard to interact with on screen elements. However, by it's nature of putting a html div element correctly over the top of a pixi element, it can also be useful for debugging information. https://github.com/pixijs/pixi.js/issues/4526 is a PR that details one such usage with clever usage of the accessibleTitle property on display objects, and the attr property on html elements
+
+## PIXI.Ticker
+
+If your app isn't stable 60FPS on some devices, its good to add 30FPS option to your app, by changing `PIXI.settings.TARGET_FPMS` to `0.03` (its FPS divided by 1000). 
+
+Here's the list of resources for advanced management:
+
+(Forum thread about FPSAutoTuner)[http://www.html5gamedevs.com/topic/42464-contrib-fpsautotuner-or-how-i-auto-adjust-the-fps-my-app-runs-at-for-every-device-automatically/]
