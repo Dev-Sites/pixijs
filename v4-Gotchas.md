@@ -325,4 +325,4 @@ If your app isn't stable 60FPS on some devices, its good to add 30FPS option to 
 
 Here's the list of resources for advanced management:
 
-(Forum thread about FPSAutoTuner)[http://www.html5gamedevs.com/topic/42464-contrib-fpsautotuner-or-how-i-auto-adjust-the-fps-my-app-runs-at-for-every-device-automatically/]
+* [Forum thread about **FpsAutoTuner**](http://www.html5gamedevs.com/topic/42464-contrib-fpsautotuner-or-how-i-auto-adjust-the-fps-my-app-runs-at-for-every-device-automatically/)
