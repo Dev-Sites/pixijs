@@ -25,15 +25,4 @@
 - [[Boilerplates|Boilerplate]]
 
 **Version 5**
-- [[How to Write a Proposal|v5-How-to-Write-a-Proposal]]
-- System Architecture (Coming Soon)
-- Feature Proposals
-    - [[Proposal: Layers|v5-Proposal,-Layers]]
-    - Proposal: ECS (Coming Soon)
-    - [[[WIP] Proposal: Materials & Geometry|https://github.com/pixijs/pixi.js/issues/4178]]
-    - Proposal: Interactions (Coming Soon)
-    - Proposal: Text (Coming Soon)
-    - Proposal: Generated Mesh (Coming Soon)
-    - Proposal: TextureResource (Coming Soon)
-    - Proposal: Inner and Outer Filters (Coming Soon)
-    - [[Proposal: Return of The Stage|v5-Proposal,-Return-of-the-Stage]]
+- [[Migration Guide|v5-Migration-Guide]]
