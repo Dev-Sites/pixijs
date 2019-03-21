@@ -42,11 +42,9 @@ const graphic = new PIXI.Graphics()
 [Live example in v5.0.0-rc.2](https://pixiplayground.com/#/edit/TOj~yOoDPXJ2IuULzdnq8)
 
 
-## Filters
+## Filter Padding
 
-In v4 filters had a default padding of 4.  
-
-In v5 this has been changed to a default of 0. This can cause some filters to look broken when used. To fix this issue simply add some padding to the filters you create. 
+In v4 filters had a default padding of `4` and in v5 this has been changed to a default of `0`. This can cause some filters to look broken when used. To fix this issue simply add some padding to the filters you create. 
 
 ```js
 // Glow filter from https://github.com/pixijs/pixi-filters
@@ -54,4 +52,4 @@ const filter = new PIXI.filters.GlowFilter();
 filter.padding = 4;
 ```
 
-Some filters like blur automatically calculate the padding for you so changing it may not be necessary.
+Some filters, like `BlurFilter`, automatically calculate the padding so changes may not be necessary.
