@@ -53,3 +53,32 @@ filter.padding = 4;
 ```
 
 Some filters, like `BlurFilter`, automatically calculate the padding so changes may not be necessary.
+
+## Bundling Changes
+
+If you're using [Webpack](https://webpack.js.org/), [Rollup](https://rollupjs.org/), [Parcel](https://parceljs.org) or another bundler to add PixiJS into your project there are a few subtle changes when moving to v5. Namely, the global `PIXI` object is no longer created automatically. This was removed from bundling for two purpose: 1) to improve tree-shaking for bundlers, and 2) for security purpose by protecting `PIXI`.
+
+This is no longer a valid way to import:
+
+```js
+import "pixi.js"; // INVALID! No more global.PIXI!
+const renderer = PIXI.autoDetectRenderer();
+```
+
+Instead, you should import only what's needed:
+
+```js
+import * as PIXI from "pixi.js";
+const renderer = PIXI.autoDetectRenderer();
+
+// or even better:
+import { autoDetectRenderer } from "pixi.js";
+const renderer = autoDetectRenderer();
+```
+
+Lastly, some 3rd-party plugins maybe expecting `window.PIXI`, so you might have to explicitly expose the global like this, however this is _not recommended_.
+
+```js
+import * as PIXI from 'pixi.js';
+window.PIXI = PIXI; // some bundler might prefer "global" instead of "window"
+```
