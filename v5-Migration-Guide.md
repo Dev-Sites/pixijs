@@ -10,6 +10,24 @@ PixiJS v5 has made WebGL the first-class renderer and made CanvasRenderer to be 
 
 If you created a plugin or project that previously used `render` on a Container (see [#5510](https://github.com/pixijs/pixi.js/issues/5510)), this will probably cause your project to not render correctly. Please consider renaming your user-defined `render` to something else. In most other cases, you'll get a deprecation warning trying to invoke WebGL-related classes or methods, e.g., `new PIXI.WebGLRenderer()`.
 
+## Canvas Becomes Legacy
+
+Since WebGL and WebGL2 are now first-class, we have removed the canvas-based fallback from the default **pixi.js** package. If you need `CanvasRenderer`, you should switch to use **pixi.js-legacy** instead.
+
+```js
+import * as PIXI from "pixi.js";
+// Will NOT return CanvasRenderer because canvas-based
+// functionality was removed from "pixi.js"
+const renderer = PIXI.autoDetectRenderer(); // return PIXI.Renderer or throws error
+```
+
+Instead, use the legacy bundle to have access to the canvas rendering.
+
+```js
+import * as PIXI from "pixi.js-legacy";
+const renderer = PIXI.autoDetectRenderer(); // returns PIXI.Renderer or PIXI.CanvasRenderer
+```
+
 ## Graphics Holes
 
 Drawing holes in Graphics was very limited in v4. This only supported non-Shape drawing, like using `lineTo`, `bezierCurveTo`, etc. In v5, we improved the hole API by supporting shapes. Unfortunately, there's no deprecation strategy to support the v4 API. For instance, in v4:
