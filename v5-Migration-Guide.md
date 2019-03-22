@@ -82,11 +82,11 @@ If you're using [Webpack](https://webpack.js.org/), [Rollup](https://rollupjs.or
 This is no longer a valid way to import:
 
 ```js
-import "pixi.js"; // INVALID! No more global.PIXI!
-const renderer = PIXI.autoDetectRenderer();
+import "pixi.js";
+const renderer = PIXI.autoDetectRenderer(); // INVALID! No more global.PIXI!
 ```
 
-Instead, you should import only what's needed:
+Instead, you should import as a namespace or individual elements:
 
 ```js
 import * as PIXI from "pixi.js";
