@@ -101,5 +101,5 @@ Lastly, some 3rd-party plugins maybe expecting `window.PIXI`, so you might have 
 
 ```js
 import * as PIXI from 'pixi.js';
-window.PIXI = PIXI; // some bundler might prefer "global" instead of "window"
+window.PIXI = PIXI; // some bundlers might prefer "global" instead of "window"
 ```
