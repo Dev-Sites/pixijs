@@ -41,7 +41,7 @@ const graphic = new PIXI.Graphics()
   .drawCircle(50, 50, 30)
   .endHole();
 ```
-[Live example in v5.0.0-rc.2](https://pixiplayground.com/#/edit/TOj~yOoDPXJ2IuULzdnq8)
+[Live example in v5.0.0-rc.3](https://pixiplayground.com/#/edit/TOj~yOoDPXJ2IuULzdnq8)
 
 ### Filter Padding
 
