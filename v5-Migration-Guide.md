@@ -92,7 +92,7 @@ glTex.enableMipmap(); // this is what actually generates mipmaps in WebGL
 glTex.enableLinearScaling(); // this is what tells WebGL to USE those mipmaps
 ```
 
-In v5, this code is no longer be needed.
+In v5, this code is no longer needed.
 
 ## Publishing Changes
 
