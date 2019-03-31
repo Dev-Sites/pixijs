@@ -55,11 +55,11 @@ filter.padding = 4;
 
 Some filters, like `BlurFilter`, automatically calculate the padding so changes may not be necessary.
 
-### `BaseTexture.loadSource`
+### BaseTexture Changes
 
-`BaseTexture.loadSource` is no longer a function.
+`BaseTexture.loadSource` is no longer a function for beginning load:
 
-v4 code:
+In v4 code:
 ```js
 const image = new Image();
 image.src = base64Data;
@@ -70,7 +70,7 @@ baseTexture.on('error', (error) => { throw error; });
 baseTexture.loadSource(image);
 ```
 
-v5 code:
+In v5 code:
 ```js
 const image = new Image();
 image.src = base64Data;
@@ -78,7 +78,6 @@ const baseTexture = new PIXI.BaseTexture(image);
 
 baseTexture.on('loaded', () => {/*Use the image here*/});
 baseTexture.on('error', (error) => { throw error; });
-
 baseTexture.update();
 ```
 
@@ -86,13 +85,14 @@ baseTexture.update();
 
 Previously, you may have ended up with code like this in v4 (specifically if you saw [Ivan's comment/JSFiddle](https://github.com/pixijs/pixi.js/issues/4155#issuecomment-342471151)):
 ```js
-pixiRenderer.bindTexture(baseRenderTex, false, 0);
-const glTex = baseRenderTex._glTextures[pixiRenderer.CONTEXT_UID];
+const renderer = PIXI.autoDetectRenderer();
+renderer.bindTexture(baseRenderTex, false, 0);
+const glTex = baseRenderTex._glTextures[renderer.CONTEXT_UID];
 glTex.enableMipmap(); // this is what actually generates mipmaps in WebGL
 glTex.enableLinearScaling(); // this is what tells WebGL to USE those mipmaps
 ```
 
-In v5, this code should no longer be needed at all.
+In v5, this code is no longer be needed.
 
 ## Publishing Changes
 
