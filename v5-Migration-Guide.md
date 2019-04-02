@@ -72,6 +72,13 @@ In v5, this code is no longer needed.
 
 One of the newest features in v5 is that we decoupled all the asset-specific functionality from BaseTexture. We created a new system called "resources" and each BaseTexture now has a resource that wraps some specific asset type. For instance: VideoResource, SVGResource, ImageResource, CanvasResource. In the future, we hope to be able to add other resource types. If there were asset-specific methods or properties being called before, these will probably be on `baseTexture.resource`.
 
+Also, we removed all of the `from*` methods from BaseTexture, so you just can call `BaseTexture.from` and pass in whatever resource. Please see [docs](http://pixijs.download/dev/docs/PIXI.BaseTexture.htm) for more information about `from`.
+
+```js
+const canvas = document.createElement('canvas');
+const baseTexture = PIXI.BaseTexture.from(canvas);
+```
+
 ## Publishing Changes
 
 ### Canvas Becomes Legacy
