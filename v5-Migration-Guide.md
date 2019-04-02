@@ -68,6 +68,10 @@ glTex.enableLinearScaling(); // this is what tells WebGL to USE those mipmaps
 
 In v5, this code is no longer needed.
 
+### BaseTexture Resources
+
+One of the newest features in v5 is that we decoupled all the asset-specific functionality from BaseTexture. We created a new system called "resources" and each BaseTexture now has a resource that wraps some specific asset type. For instance: VideoResource, SVGResource, ImageResource, CanvasResource. In the future, we hope to be able to add other resource types. If there were asset-specific methods or properties being called before, these will probably be on `baseTexture.resource`.
+
 ## Publishing Changes
 
 ### Canvas Becomes Legacy
