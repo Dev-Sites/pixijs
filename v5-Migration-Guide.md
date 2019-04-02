@@ -55,33 +55,7 @@ filter.padding = 4;
 
 Some filters, like `BlurFilter`, automatically calculate the padding so changes may not be necessary.
 
-### BaseTexture Changes
-
-`BaseTexture.loadSource` is no longer a function for beginning load:
-
-In v4 code:
-```js
-const image = new Image();
-image.src = base64Data;
-const baseTexture = new PIXI.BaseTexture();
-
-baseTexture.on('loaded', () => {/*Use the image here*/});
-baseTexture.on('error', (error) => { throw error; });
-baseTexture.loadSource(image);
-```
-
-In v5 code:
-```js
-const image = new Image();
-image.src = base64Data;
-const baseTexture = new PIXI.BaseTexture(image);
-
-baseTexture.on('loaded', () => {/*Use the image here*/});
-baseTexture.on('error', (error) => { throw error; });
-baseTexture.update();
-```
-
-### Enabling mipmapping
+### Enable Mipmapping
 
 Previously, you may have ended up with code like this in v4 (specifically if you saw [Ivan's comment/JSFiddle](https://github.com/pixijs/pixi.js/issues/4155#issuecomment-342471151)):
 ```js
