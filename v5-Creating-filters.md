@@ -13,11 +13,11 @@ Here and in all docs we use `normalized` word for first type, `pixels` for third
 
 There are 5 coordinates systems in pixi filters. Each can be used with any of three types.
 
-1. Input - temporary pow2 texture that FilterSystem took from the pool. Used for `texture2D` sampling.
-2. Screen - do not depend whether output is temporary texture or screen, whether there we are 10 filters away from screen, it is the screen coord.
-3. Filter coords - (0,0) is mapped to top-left corner of part of screen that is covered by filter. For CSS or physical units it has the same scale but different offset than screen.
-4. Sprite texture coords - sometimes there's extra sprite input in filter. Sprite is positioned in pixi stage tree and its area does not equal filter area. This is what we pass in `texture2D()` for extra sampler. Example is (DisplacementFilter)[https://github.com/pixijs/pixi.js/tree/dev/packages/filters/filter-displacement/src]
-5. Sprite atlas coords - sprite can use texture from an atlas, and just sprite texture coords aren't enough to get the correct value from `texture2D`. Example: (SpriteMaskFilter)[https://github.com/pixijs/pixi.js/tree/dev/packages/core/src/filters/spriteMask]
+1. _Input coords_ - temporary pow2 texture that FilterSystem took from the pool. Used for `texture2D` sampling.
+2. _Screen coords_ - do not depend whether output is temporary texture or screen, whether there we are 10 filters away from screen, it is the screen coord.
+3. _Filter coords_ - (0,0) is mapped to top-left corner of part of screen that is covered by filter. For CSS or physical units it has the same scale but different offset than screen.
+4. _Sprite texture coords_ - sometimes there's extra sprite input in filter. Sprite is positioned in pixi stage tree and its area does not equal filter area. This is what we pass in `texture2D()` for extra sampler. Example is [DisplacementFilter](https://github.com/pixijs/pixi.js/tree/dev/packages/filters/filter-displacement/src)
+5. _Sprite atlas coords_ - sprite can use texture from an atlas, and just _sprite texture coords_ aren't enough to get the correct value from `texture2D`. Example: [SpriteMaskFilter](https://github.com/pixijs/pixi.js/tree/dev/packages/core/src/filters/spriteMask)
 
 ## Default filter code
 
@@ -60,11 +60,11 @@ void main(void)
 }
 ```
 
-* `aVertexPosition` is normalized filter coord
+* `aVertexPosition` is _normalized filter coord_
 
-* `vTextureCoord` is normalized input coord
+* `vTextureCoord` is _normalized input coord_
 
-* `aVertexPosition * outputFrame.zw` is filter coord
+* `aVertexPosition * outputFrame.zw` is _filter coord_
 
 *  `vec2 position = aVertexPosition * max(outputFrame.zw, vec2(0.)) + outputFrame.xy` is screen coord
 
@@ -85,7 +85,7 @@ void main(void){
 }
 ```
 
-As mentioned above, `vTextureCoord` is normalized input coord that we pass to default sampler.
+As mentioned above, `vTextureCoord` is _normalized input coord_ that we pass to default sampler.
 
 ## Default shaders in v4
 
