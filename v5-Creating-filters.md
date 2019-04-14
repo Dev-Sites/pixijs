@@ -4,7 +4,7 @@ V5 filters are awesome.
 
 ### Coordinate systems
 
-There are 3 types of coordinates:
+There are 3 unit measures of coordinates:
 1. _Normalized_ (0,0) is top-left corner, (1,1) is bottom-right.
 2. _Virtual units_ (CSS), its units that pixi use for containers, displayObjects and so on. (0,0) is left-top corner, (w,h) is right-bottom.
 3. _Physical pixels_ (pixels), basically same a screen units. Difference appears on retina screens. As an example, it helps in case you want to know physical pixel on the right/left/top/down of current one.
