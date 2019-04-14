@@ -5,9 +5,9 @@ V5 filters are awesome.
 ### Coordinate systems
 
 There are 3 types of coordinates:
-1. Normalized (0,0) is top-left corner, (1,1) is bottom-right.
-2. Virtual units (CSS), its units that pixi use for containers, displayObjects and so on. (0,0) is left-top corner, (w,h) is right-bottom.
-3. Physical pixels (pixels), basically same a screen units. Difference appears on retina screens. As an example, it helps in case you want to know physical pixel on the right/left/top/down of current one.
+1. _Normalized_ (0,0) is top-left corner, (1,1) is bottom-right.
+2. _Virtual units_ (CSS), its units that pixi use for containers, displayObjects and so on. (0,0) is left-top corner, (w,h) is right-bottom.
+3. _Physical pixels_ (pixels), basically same a screen units. Difference appears on retina screens. As an example, it helps in case you want to know physical pixel on the right/left/top/down of current one.
 
 Here and in all docs we use `normalized` word for first type, `pixels` for third type. By default we are talking about virtual units (CSS).
 
