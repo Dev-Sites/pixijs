@@ -14,6 +14,11 @@
 
 [:moneybag: Donate](https://www.patreon.com/user?u=2384552)
 
+**Version 5**
+- [[Migration Guide|v5-Migration-Guide]]
+- [[Creating Filters|v5-Creating-filters]]
+- [[Custom Application|v5-Custom-Application-GameLoop]]
+
 **Version 4**
 - [[Tips, Tricks, and Pitfalls|v4-Tips,-Tricks,-and-Pitfalls]]
 - [[Performance Tips|v4-Performance-Tips]]
@@ -23,6 +28,3 @@
 - [[Resources|v4-Resources]]
 - [[Gotchas|v4-Gotchas]]
 - [[Boilerplates|Boilerplate]]
-
-**Version 5**
-- [[Migration Guide|v5-Migration-Guide]]
