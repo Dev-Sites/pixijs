@@ -25,7 +25,7 @@ let renderer = new PIXI.Renderer({width: 800, height: 600, transparent: true}); 
 
 ### Mesh, Plane, Rope
 
-PixiJS v5 introduces new class `PIXI.Mesh` that allows to override default shader and to add more attributes to geometry.
+PixiJS v5 introduces new class `PIXI.Mesh` that allows to override default shader and to add more attributes to geometry. For [example](https://pixijs.io/examples/#/mesh/triangle-textured.js), you can add colors to vertices.
 
 Old Mesh is moved from `PIXI.mesh.Mesh` to [PIXI.SimpleMesh](https://github.com/pixijs/pixi.js/blob/dev/packages/mesh-extras/src/SimpleMesh.js), it extends `PIXI.Mesh`.
 
