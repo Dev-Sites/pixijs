@@ -21,7 +21,7 @@ let renderer = new PIXI.Renderer(800, 600, {transparent: true}); // bad
 let renderer = new PIXI.Renderer({width: 800, height: 600, transparent: true}); // good
 ```
 
-* Note: Setting "transparent" to true in renderer or application constructor might help with strange renderer effects on some devices, but it might reduce FPS. However its much better than `preserveDrawingBuffer: true` *
+* Note: Setting "transparent" to true in renderer or application constructor might help with strange renderer effects on some devices, but it might reduce FPS. However its much better than `preserveDrawingBuffer: true`
 
 ### Graphics Holes
 
