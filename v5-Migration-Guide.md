@@ -23,6 +23,29 @@ let renderer = new PIXI.Renderer({width: 800, height: 600, transparent: true}); 
 
 * Note: Adding `transparent: true` in renderer or application constructor options might help with strange artifacts on some devices, but it might reduce FPS. However its much better than `preserveDrawingBuffer: true`
 
+### Mesh, Plane, Rope
+
+PixiJS v5 introduces new class `PIXI.Mesh` that allows to override default shader and to add more attributes to geometry.
+
+Old Mesh is moved from `PIXI.mesh.Mesh` to [PIXI.SimpleMesh](https://github.com/pixijs/pixi.js/blob/dev/packages/mesh-extras/src/SimpleMesh.js), it extends `PIXI.Mesh`.
+
+`PIXI.mesh.Rope`, `PIXI.mesh.Plane`, `PIXI.mesh.NineSlicePlane` are moved to `PIXI.SimpleRope`, `PIXI.SimplePlane` and `PIXI.NineSlicePlane` respectively.
+
+If you used custom shaders, or better generated meshes, now is the time to read the new sources, we hope that you will appreciate our refactoring.
+
+`PIXI.SimpleMesh` fields `vertices`, `uvs`, `indices` are wrapped inside `mesh.geometry` attribute [buffers](https://github.com/pixijs/pixi.js/blob/dev/packages/core/src/geometry/Buffer.js). For example, this is how access to buffers provided through `mesh.uvBuffer` property: 
+
+```js
+get uvBuffer()
+{
+    return this.geometry.buffers[1];
+}
+```
+
+`indices`0 property shortcut is missing for now, but you can access the data inside `mesh.geometry.indexBuffer`.
+
+You can override buffer data, and notify it that data was changed, in this case buffer will be uploaded to GPU lazily. Previously in v4 mesh had several flags that indicated which attributes have to be updated and their names confused people. 
+
 ### Graphics Holes
 
 Drawing holes in Graphics was very limited in v4. This only supported non-Shape drawing, like using `lineTo`, `bezierCurveTo`, etc. In v5, we improved the hole API by supporting shapes. Unfortunately, there's no deprecation strategy to support the v4 API. For instance, in v4:
