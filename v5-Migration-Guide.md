@@ -66,6 +66,12 @@ filter.padding = 4;
 
 Some filters, like `BlurFilter`, automatically calculate the padding so changes may not be necessary.
 
+### Filter default vertex shader
+
+We re-organized all uniforms dedicated to coordinate system transforms, and renamed. If your filter doesn't work anymore, check if you use default vertex shader. In that case, you can use old v4 vertex shader code. 
+
+All changes are explained in [[Creating Filters|v5-Creating-filters]]
+
 ### Enable Mipmapping for RenderTexture
 
 Previously, you may have ended up with code like this in v4 (specifically if you saw [Ivan's comment/JSFiddle](https://github.com/pixijs/pixi.js/issues/4155#issuecomment-342471151)):
