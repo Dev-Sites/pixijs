@@ -42,7 +42,7 @@ get uvBuffer()
 }
 ```
 
-`indices`0 property shortcut is missing for now, but you can access the data inside `mesh.geometry.indexBuffer`.
+`indices` property shortcut is also missing, but you can access the data inside `mesh.geometry.indexBuffer`.
 
 You can override buffer data, and notify it that data was changed, in this case buffer will be uploaded to GPU lazily. Previously in v4 mesh had several flags that indicated which attributes have to be updated and their names confused people. 
 
