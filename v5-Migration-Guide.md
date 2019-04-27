@@ -14,14 +14,14 @@ If you created a plugin or project that previously used `render` on a Container 
 
 ### Renderer parameters
 
-Due to refactoring in Renderer (ex-WebGLRenderer), specifying options as a third parameter in constructor might no longer work. Please ember width and height to options and pass it as the only parameter.
+Due to refactoring in `Renderer`, specifying options as a third parameter in constructor no longer works. Please embed width and height to options and pass it as the only parameter.
 
 ```js
 let renderer = new PIXI.Renderer(800, 600, {transparent: true}); // bad
 let renderer = new PIXI.Renderer({width: 800, height: 600, transparent: true}); // good
 ```
 
-* Note: Adding `transparent=true` in renderer or application constructor options might help with strange renderer effects on some devices, but it might reduce FPS. However its much better than `preserveDrawingBuffer: true`
+* Note: Adding `transparent: true` in renderer or application constructor options might help with strange renderer effects on some devices, but it might reduce FPS. However its much better than `preserveDrawingBuffer: true`
 
 ### Graphics Holes
 
