@@ -68,7 +68,7 @@ Some filters, like `BlurFilter`, automatically calculate the padding so changes 
 
 ### Filter default vertex shader
 
-We re-organized all uniforms dedicated to coordinate system transforms, and renamed. If your filter doesn't work anymore, check if you use default vertex shader. In that case, you can use old v4 vertex shader code. 
+We reorganized all uniforms dedicated to coordinate system transforms, and renamed them. If your filter doesn't work anymore, check if you use default vertex shader. In that case, you can use old v4 vertex shader code. 
 
 All changes are explained in [[Creating Filters|v5-Creating-filters]]
 
