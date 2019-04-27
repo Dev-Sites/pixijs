@@ -55,7 +55,7 @@ filter.padding = 4;
 
 Some filters, like `BlurFilter`, automatically calculate the padding so changes may not be necessary.
 
-### Enable Mipmapping
+### Enable Mipmapping for RenderTexture
 
 Previously, you may have ended up with code like this in v4 (specifically if you saw [Ivan's comment/JSFiddle](https://github.com/pixijs/pixi.js/issues/4155#issuecomment-342471151)):
 ```js
@@ -78,6 +78,28 @@ Also, we removed all of the `from*` methods from BaseTexture, so you just can ca
 const canvas = document.createElement('canvas');
 const baseTexture = PIXI.BaseTexture.from(canvas);
 ```
+
+That API also allows to use pure WebGL and 2d context calls, see the [gradient example](https://pixijs.io/examples/#/textures/gradient-resource.js). 
+
+### Graphics Interaction
+
+If you use transparent interactive graphics trick, make sure that you use specify alpha=0 for all element, not for its parts. How PixiJS deals with shapes that have alpha=0 is considered undefined behaviour. We might change it back, but we have no guarantees about it. 
+
+```js
+graphics.beginFill(0xffffff, 0.0); //bad
+graphics.alpha = 0; //good
+```
+
+### Renderer parameters
+
+Due to refactoring in Renderer (ex-WebGLRenderer), specifying options as a third parameter in constructor might no longer work. Please ember width and height to options and pass it as the only parameter.
+
+```js
+let renderer = new PIXI.Renderer(800, 600, {transparent: true}); // bad
+let renderer = new PIXI.Renderer({width: 800, height: 600, transparent: true}); // good
+```
+
+** Note: Setting "transparent" to true in renderer or application constructor might help with strange renderer effects on some devices, but it might reduce FPS. However its much better than `preserveDrawingBuffer: true` **
 
 ## Publishing Changes
 
