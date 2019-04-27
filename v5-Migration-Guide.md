@@ -12,6 +12,17 @@ PixiJS v5 has made WebGL the first-class renderer and made CanvasRenderer to be 
 
 If you created a plugin or project that previously used `render` on a Container (see [#5510](https://github.com/pixijs/pixi.js/issues/5510)), this will probably cause your project to not render correctly. Please consider renaming your user-defined `render` to something else. In most other cases, you'll get a deprecation warning trying to invoke WebGL-related classes or methods, e.g., `new PIXI.WebGLRenderer()`.
 
+### Renderer parameters
+
+Due to refactoring in Renderer (ex-WebGLRenderer), specifying options as a third parameter in constructor might no longer work. Please ember width and height to options and pass it as the only parameter.
+
+```js
+let renderer = new PIXI.Renderer(800, 600, {transparent: true}); // bad
+let renderer = new PIXI.Renderer({width: 800, height: 600, transparent: true}); // good
+```
+
+* Note: Setting "transparent" to true in renderer or application constructor might help with strange renderer effects on some devices, but it might reduce FPS. However its much better than `preserveDrawingBuffer: true` *
+
 ### Graphics Holes
 
 Drawing holes in Graphics was very limited in v4. This only supported non-Shape drawing, like using `lineTo`, `bezierCurveTo`, etc. In v5, we improved the hole API by supporting shapes. Unfortunately, there's no deprecation strategy to support the v4 API. For instance, in v4:
@@ -89,17 +100,6 @@ If you use transparent interactive graphics trick, make sure that you use specif
 graphics.beginFill(0xffffff, 0.0); //bad
 graphics.alpha = 0; //good
 ```
-
-### Renderer parameters
-
-Due to refactoring in Renderer (ex-WebGLRenderer), specifying options as a third parameter in constructor might no longer work. Please ember width and height to options and pass it as the only parameter.
-
-```js
-let renderer = new PIXI.Renderer(800, 600, {transparent: true}); // bad
-let renderer = new PIXI.Renderer({width: 800, height: 600, transparent: true}); // good
-```
-
-** Note: Setting "transparent" to true in renderer or application constructor might help with strange renderer effects on some devices, but it might reduce FPS. However its much better than `preserveDrawingBuffer: true` **
 
 ## Publishing Changes
 
