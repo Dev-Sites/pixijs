@@ -12,26 +12,26 @@ PixiJS v5 has made WebGL the first-class renderer and made CanvasRenderer to be 
 
 If you created a plugin or project that previously used `render` on a Container (see [#5510](https://github.com/pixijs/pixi.js/issues/5510)), this will probably cause your project to not render correctly. Please consider renaming your user-defined `render` to something else. In most other cases, you'll get a deprecation warning trying to invoke WebGL-related classes or methods, e.g., `new PIXI.WebGLRenderer()`.
 
-### Renderer parameters
+### Renderer Parameters
 
-Due to refactoring in `Renderer`, specifying options as a third parameter in constructor no longer works. Please embed width and height to options and pass it as the only parameter.
+Specifying `options` as a third parameter in `Renderer` constructor is officially dropped (same with `PIXI.Application`, `PIXI.autoDetectRenderer` & `PIXI.CanvasRenderer`). In v4 we supported two function signatures, but in v5 we dropped `width, height, options` signature. Please add `width` and `height` to `options`.
 
 ```js
-let renderer = new PIXI.Renderer(800, 600, {transparent: true}); // bad
-let renderer = new PIXI.Renderer({width: 800, height: 600, transparent: true}); // good
+const renderer = new PIXI.Renderer(800, 600, { transparent: true }); // bad
+const renderer = new PIXI.Renderer({ width: 800, height: 600, transparent: true }); // good
 ```
 
-* Note: Adding `transparent: true` in renderer or application constructor options might help with strange artifacts on some devices, but it might reduce FPS. However its much better than `preserveDrawingBuffer: true`
+* Note: Adding `transparent: true` in Renderer or Application constructor options might help with strange artifacts on some devices, but it might reduce FPS. It's much better than `preserveDrawingBuffer: true`.
 
 ### Mesh, Plane, Rope
 
-PixiJS v5 introduces new class `PIXI.Mesh` that allows to override default shader and to add more attributes to geometry. For [example](https://pixijs.io/examples/#/mesh/triangle-textured.js), you can add colors to vertices.
+PixiJS v5 introduces a new class called `PIXI.Mesh`. This allows overriding the default shader and the ability to add more attributes to geometry. For [example](https://pixijs.io/examples/#/mesh/triangle-textured.js), you can add colors to vertices.
 
-Old Mesh is moved from `PIXI.mesh.Mesh` to [PIXI.SimpleMesh](https://github.com/pixijs/pixi.js/blob/dev/packages/mesh-extras/src/SimpleMesh.js), it extends `PIXI.Mesh`.
+The old v4 Mesh class has moved from `PIXI.mesh.Mesh` to [`PIXI.SimpleMesh`](http://pixijs.download/dev/docs/PIXI.SimpleMesh.html), it extends `PIXI.Mesh`.
 
-`PIXI.mesh.Rope`, `PIXI.mesh.Plane`, `PIXI.mesh.NineSlicePlane` are moved to `PIXI.SimpleRope`, `PIXI.SimplePlane` and `PIXI.NineSlicePlane` respectively.
+`PIXI.mesh.Rope`, `PIXI.mesh.Plane`, `PIXI.mesh.NineSlicePlane` have moved to `PIXI.SimpleRope`, `PIXI.SimplePlane` and `PIXI.NineSlicePlane` respectively.
 
-If you used custom shaders, or better generated meshes, now is the time to read the new sources, we hope that you will appreciate our refactoring.
+If you used custom shaders or generated meshes in v4, you might be impacted by these changes in v5.
 
 `PIXI.SimpleMesh` fields `vertices`, `uvs`, `indices` are wrapped inside `mesh.geometry` attribute [buffers](https://github.com/pixijs/pixi.js/blob/dev/packages/core/src/geometry/Buffer.js). For example, this is how access to buffers provided through `mesh.uvBuffer` property: 
 
@@ -42,7 +42,7 @@ get uvBuffer()
 }
 ```
 
-`indices` property shortcut is also missing, but you can access the data inside `mesh.geometry.indexBuffer`.
+The `indices` property shortcut is also missing, but you can access the data inside `mesh.geometry.indexBuffer`.
 
 You can override buffer data, and notify it that data was changed, in this case buffer will be uploaded to GPU lazily. Previously in v4 mesh had several flags that indicated which attributes have to be updated and their names confused people. 
 
@@ -63,7 +63,7 @@ const graphic = new PIXI.Graphics()
   .lineTo(10, 90)
   .addHole();
 ```
-[Live example in v4.8.6](https://pixiplayground.com/#/edit/i8LAwMn4s1oFkx2_fPt3F)
+[Live example in **v4.x**](https://jsfiddle.net/bigtimebuddy/09L1gxbj/)
 
 In v5, Graphics has simplified and the API changed from `addHole` to `beginHole` and `endHole`. 
 
@@ -75,7 +75,7 @@ const graphic = new PIXI.Graphics()
   .drawCircle(50, 50, 30)
   .endHole();
 ```
-[Live example in v5.0.0-rc.3](https://pixiplayground.com/#/edit/TOj~yOoDPXJ2IuULzdnq8)
+[Live example in **dev**](https://jsfiddle.net/bigtimebuddy/L0hf41mb/)
 
 ### Filter Padding
 
@@ -89,7 +89,7 @@ filter.padding = 4;
 
 Some filters, like `BlurFilter`, automatically calculate the padding so changes may not be necessary.
 
-### Filter default vertex shader
+### Filter Default Vertex Shader
 
 We reorganized all uniforms dedicated to coordinate system transforms, and renamed them. If your filter doesn't work anymore, check if you use default vertex shader. In that case, you can use old v4 vertex shader code. 
 
@@ -98,6 +98,7 @@ All changes are explained in [[Creating Filters|v5-Creating-filters]]
 ### Enable Mipmapping for RenderTexture
 
 Previously, you may have ended up with code like this in v4 (specifically if you saw [Ivan's comment/JSFiddle](https://github.com/pixijs/pixi.js/issues/4155#issuecomment-342471151)):
+
 ```js
 const renderer = PIXI.autoDetectRenderer();
 renderer.bindTexture(baseRenderTex, false, 0);
