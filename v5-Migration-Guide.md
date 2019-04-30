@@ -1,6 +1,6 @@
 This document is useful for developers who are attempting to **upgrading from v4 to v5**. This includes gotchas and important context for understanding why your v4 code made need some subtle changes. In general, we've try to be as backward-compatible in v5 with the use of deprecation warnings in the `console`. There are, however, sometimes when changes are too substantial and require some additional help.
 
-## API Changes
+## 🚧 API Changes
 
 ### Making WebGL First-Class
 
@@ -131,7 +131,7 @@ graphics.beginFill(0xffffff, 0.0); //bad
 graphics.alpha = 0; //good
 ```
 
-## Publishing Changes
+## 📦 Publishing Changes
 
 ### Canvas Becomes Legacy
 
