@@ -8,7 +8,7 @@ For `Hello World` apps and simple demos we have special `Application` class mash
 
 ```js
 // setup application
-var app = new PIXI.Application(800, 600, { backgroundColor: 0x1099bb });
+var app = new PIXI.Application({ width: 800, height: 600, backgroundColor: 0x1099bb });
 document.body.appendChild(app.view);
 
 // setup sprites
