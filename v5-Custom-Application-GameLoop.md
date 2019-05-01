@@ -36,7 +36,7 @@ To have more control, you can manually setup all the plugins you need. In this c
 
 ```js
 // setup renderer and ticker
-var renderer = new PIXI.Renderer(800, 600, { backgroundColor: 0x1099bb });
+var renderer = new PIXI.Renderer({ width: 800, height: 600, backgroundColor: 0x1099bb });
 document.body.appendChild(renderer.view);
 var stage = new PIXI.Container();
 
