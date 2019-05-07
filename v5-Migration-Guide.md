@@ -182,15 +182,16 @@ window.PIXI = PIXI; // some bundlers might prefer "global" instead of "window"
 
 ### Webpack 
 
-If you're using [Webpack](https://webpack.js.org/) and 3rd-party plugins like pixi-spine adding a `window.PIXI = PIXI` will not be enough and you will get some `ReferenceError: PIXI is not defined`.
+When [Webpack](https://webpack.js.org/) and 3rd-party plugins, like **pixi-spine**, you might have difficulties building the global `PIXI` object resulting in a runtime error `ReferenceError: PIXI is not defined`. Usually this can be resolved by using [Webpack shimming globals](https://webpack.js.org/guides/shimming/#shimming-globals).
 
-First you need to use imports as following :  
+For instance, here's your import code:
+ 
 ```js
 import * as PIXI from 'pixi.js';
 import 'pixi-spine'; // or other plugins that need global 'PIXI' to be defined first
 ```
 
-Next, you need to add a `plugins` section to your webpack.config.js to let know webpack that the global 'PIXI' variable make reference to 'pixi.js':
+Add a `plugins` section to your **webpack.config.js** to let know Webpack that the global `PIXI` variable make reference to `pixi.js` module. For instance:
 
 ```
 const webpack = require('webpack');
@@ -205,5 +206,5 @@ module.exports = {
        PIXI: 'pixi.js'
      })
    ]
-}	
+}
 ```
