@@ -153,7 +153,7 @@ const renderer = PIXI.autoDetectRenderer(); // returns PIXI.Renderer or PIXI.Can
 
 ### Bundling Changes
 
-If you're using [Webpack](https://webpack.js.org/), [Rollup](https://rollupjs.org/), [Parcel](https://parceljs.org) or another bundler to add PixiJS into your project there are a few subtle changes when moving to v5. Namely, the global `PIXI` object is no longer created automatically. This was removed from bundling for two purpose: 1) to improve tree-shaking for bundlers, and 2) for security purpose by protecting `PIXI`.
+If you're using [Rollup](https://rollupjs.org/), [Parcel](https://parceljs.org) or another bundler to add PixiJS into your project there are a few subtle changes when moving to v5. Namely, the global `PIXI` object is no longer created automatically. This was removed from bundling for two purpose: 1) to improve tree-shaking for bundlers, and 2) for security purpose by protecting `PIXI`.
 
 This is no longer a valid way to import:
 
@@ -178,4 +178,32 @@ Lastly, some 3rd-party plugins maybe expecting `window.PIXI`, so you might have 
 ```js
 import * as PIXI from 'pixi.js';
 window.PIXI = PIXI; // some bundlers might prefer "global" instead of "window"
+```
+
+### Webpack 
+
+If you're using [Webpack](https://webpack.js.org/) and 3rd-party plugins like pixi-spine adding a `window.PIXI = PIXI` will not be enough and you will get some `ReferenceError: PIXI is not defined`.
+
+First you need to use imports as following :  
+```js
+import * as PIXI from 'pixi.js';
+import 'pixi-spine'; // or other plugins that need global 'PIXI' to be defined first
+```
+
+Next, you need to add a `plugins` section to your webpack.config.js to let know webpack that the global 'PIXI' variable make reference to 'pixi.js':
+
+```
+const webpack = require('webpack');
+
+module.exports = {
+    entry: '...',
+    output: {
+        ...
+    },
+    plugins: [
+     new webpack.ProvidePlugin({
+       PIXI: 'pixi.js'
+     })
+   ]
+}	
 ```
