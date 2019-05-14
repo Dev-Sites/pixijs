@@ -114,6 +114,26 @@ void main(void) {
 
 In case you are porting stuff from v4 and you used default fragment shader, you may notice that your filter look different in v5. That's because default v4 fragment code had a serious problem regarding double multiplication by alpha.
 
+### v4 `dimensions` uniform
+
+There is very popular workaround with `dimensions` uniform in v4, it looks like that:
+
+```js
+apply (filterManager, input, output, clear)
+{
+    this.uniforms.dimensions[0] = input.sourceFrame.width;
+    this.uniforms.dimensions[1] = input.sourceFrame.height;
+    filterManager.applyFilter(this, input, output, clear);
+}
+```
+
+Unfortunately, in v5 it crashes. To fix the crash you have to:
+
+1. replace `input.sourceFrame` to `input.filterFrame`.
+2. add `dimensions` uniform in filter constructor params or body: `this.uniforms.dimensions = new Float32Array(2);`
+
+However, I advice you to remove it completely in favor of `inputSize` uniform, `inputSize.xy` is the size of filter area in pixels, exactly the same as `dimensions`. In that case you can remove extra code from constructor and `apply` function.
+
 ## Fullscreen filters
 
 This line forces pixi to use temporary renderTexture of the same size as screen:
