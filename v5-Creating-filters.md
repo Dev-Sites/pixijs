@@ -127,12 +127,12 @@ apply (filterManager, input, output, clear)
 }
 ```
 
-Unfortunately, in v5 it crashes. To fix the crash you have to:
+Unfortunately, in v5 it crashes because `input` is not RenderTarget but RenderTexture, it has no `sourceFrame` field. To fix the crash you have to:
 
 1. replace `input.sourceFrame` to `input.filterFrame`.
 2. add `dimensions` uniform in filter constructor params or body: `this.uniforms.dimensions = new Float32Array(2);`
 
-However, I advice you to remove it completely in favor of `inputSize` uniform, `inputSize.xy` is the size of filter area in pixels, exactly the same as `dimensions`. In that case you can remove extra code from constructor and `apply` function.
+However, I advice you to remove it completely in favor of built-in `inputSize` uniform, `inputSize.xy` is the size of filter area in pixels, exactly the same as `dimensions`. In that case you can remove extra code from constructor and `apply` function.
 
 ## Fullscreen filters
 
