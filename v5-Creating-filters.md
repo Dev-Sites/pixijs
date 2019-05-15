@@ -146,15 +146,19 @@ apply(filterManager, input, output, clear) {
 }
 ```
 
-In v4 that function was `getRenderTarget(clear, resolution)`. In v5 you can use `getFilterTexture(resolution)`
+In v4 that function was `getRenderTarget(clear, resolution)`. In v5 you can use `getFilterTexture(resolution)`. 
 
-Bear in mind, that due to fullscreen filter mode, there's no guarantee that `getFilterTexture(0.5)` returns the texture that is exactly two times smaller than the input. If you want to combine that temporary texture with input, you have to use conversion functions.
+`getFilterTexture()` returns the texture the same size as the input. If you use `resolution`, filter area in new texture can have different normalized coordinate system! It is fine, unless you start to use it as an extra sampler.
+
+Even more, due to fullscreen filters logic, there's no guarantee that `getFilterTexture(0.5 * input.resolution)` returns the texture that is exactly two times smaller than the input. 
+
+If you want to have it as an extra sampler, you have to use conversion functions.
 
 Suppose we have inner filter that produces result in temporary texture with smaller resolution.
 
 ```js
 apply(filterManager, input, output, clear) {
-    let rt = filterManager.getFilterTexture(0.5);
+    let rt = filterManager.getFilterTexture(0.5 * input.baseTexture.resolution);
     this._innerFilter.apply(filterManager, input, rt, true);
     this.uniforms.innerSampler = rt;
     this.uniforms.inputToTex = [input.width / rt.width, input.height / rt.height];
