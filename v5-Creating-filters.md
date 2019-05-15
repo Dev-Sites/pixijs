@@ -134,6 +134,20 @@ Unfortunately, in v5 it crashes because `input` is not RenderTarget but RenderTe
 
 However, I advice you to remove it completely in favor of built-in `inputSize` uniform, `inputSize.xy` is the size of filter area in pixels, exactly the same as `dimensions`. In that case you can remove extra code from constructor and `apply` function.
 
+## Multi-pass filters
+
+Filters can use temporary renderTextures to apply shader two times, or to apply inner filters
+
+```js
+apply(filterManager, input, output, clear) {
+    let rt = filterManager.getFilterTexture();
+    filterManager.applyFilter(this, input, rt, true);
+    filterManager.applyFilter(this, rt, output, clear);
+}
+```
+
+In v4 that function was `getRenderTarget(clear, resolution)`. In v5 you can use `getFilterTexture(resolution)`
+
 ## Fullscreen filters
 
 This line forces pixi to use temporary renderTexture of the same size as screen:
@@ -145,5 +159,11 @@ filter.filterArea = renderer.screen; //same as app.screen
 Also known as `pixi-v3 emulation` mode.
 
 Input, output and screen coords are the same in that case, and you don't have to use conversion functions.
+
+### Temporary renderTextures
+
+For multi-pass filters that were using temp renderTextures two times smaller than current resolution `filterManager.getFilterTexture(0.5)` fullscreen mode can be a problem. 
+
+Consider we have screen width=1080, and input size is 2048 (min pow2 not less than 1080). `getFilterTexture(0.5)` will return texture of size 1024, and filter area has the same UV's on it. In fullscreen mode its 1080 vs 1024 instead of 2048 vs 1024. There's no guarantee that `getFilterTexture(0.5)` return texture two times smaller than the input, please use conversion functions in that case.
 
 ## Conversion functions
