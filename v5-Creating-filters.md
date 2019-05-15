@@ -148,6 +148,32 @@ apply(filterManager, input, output, clear) {
 
 In v4 that function was `getRenderTarget(clear, resolution)`. In v5 you can use `getFilterTexture(resolution)`
 
+Bear in mind, that due to fullscreen filter mode, there's no guarantee that `getFilterTexture(0.5)` returns the texture that is exactly two times smaller than the input. If you want to combine that temporary texture with input, you have to use conversion functions.
+
+Suppose we have inner filter that produces result in temporary texture with smaller resolution.
+
+```js
+apply(filterManager, input, output, clear) {
+    let rt = filterManager.getFilterTexture(0.5);
+    this._innerFilter.apply(filterManager, input, rt, true);
+    this.uniforms.innerSampler = rt;
+    this.uniforms.inputToTex = [input.width / rt.width, input.height / rt.height];
+    filterManager.applyFilter(this, input, output, clear);
+}
+```
+
+```glsl
+uniform sampler2D innerSampler;
+uniform vec2 inputToTex;
+
+{
+    ...
+    vec2 texCoord = vTextureCoord * inputToTex;
+    vec4 inputColor = texture2D(uSampler, vTextureCoord);
+    vec4 rtColor = texture2D(innerSampler, texCoord);
+}
+```
+
 ## Fullscreen filters
 
 This line forces pixi to use temporary renderTexture of the same size as screen:
@@ -159,11 +185,5 @@ filter.filterArea = renderer.screen; //same as app.screen
 Also known as `pixi-v3 emulation` mode.
 
 Input, output and screen coords are the same in that case, and you don't have to use conversion functions.
-
-### Temporary renderTextures
-
-For multi-pass filters that were using temp renderTextures two times smaller than current resolution `filterManager.getFilterTexture(0.5)` fullscreen mode can be a problem. 
-
-Consider we have screen width=1080, and input size is 2048 (min pow2 not less than 1080). `getFilterTexture(0.5)` will return texture of size 1024, and filter area has the same UV's on it. In fullscreen mode its 1080 vs 1024 instead of 2048 vs 1024. There's no guarantee that `getFilterTexture(0.5)` return texture two times smaller than the input, please use conversion functions in that case.
 
 ## Conversion functions
