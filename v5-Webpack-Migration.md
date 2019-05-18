@@ -36,7 +36,7 @@ Regarding Texture, the function `PIXI.Texture.fromImage` has been renamed to `PI
 v4 : 
 ```js
 	import * as PIXI from 'pixi.js';
-	Texture.fromImage('./img/test.png');
+	PIXI.Texture.fromImage('./img/test.png');
 ```	
 v5:
 ```js
