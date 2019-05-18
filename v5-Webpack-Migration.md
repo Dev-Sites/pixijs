@@ -1,5 +1,5 @@
 This document is useful for developers who are attempting to upgrading from v4 to v5 using webpack. 
-However if you are looking for more general advice, you can find them [here](https://github.com/pixijs/pixi.js/wiki/v5-Migration-Guide): 
+However if you are looking for more general advice, you can find them [here](https://github.com/pixijs/pixi.js/wiki/v5-Migration-Guide).
 
 ## PIXI Core
 
@@ -93,12 +93,12 @@ v5:
 
 You might have difficulties using pixi-sound with the PIXI.Loader. You need to import pixi-sound with PIXI.Loader to make the PIXI.Loader construct correctly the sound object or you will face some `undefined` errors when calling `PIXI.Loader.shared.resources["bgMusic"].sound`.
 
-v4: 
+v5 without import : 
 ```js
         import * as PIXI from 'pixi.js';
         // Loading resources
         ...
-	const bgMusic = PIXI.Loader.shared.resources["bgMusic"].sound;
+	const bgMusic = PIXI.Loader.shared.resources["bgMusic"].sound; // bgMusic is undefined
 ```
 v5:
 ```js
